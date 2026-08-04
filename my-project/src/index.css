@@ -14,6 +14,19 @@ body {
   font-optical-sizing: auto;
   background: #f5f0f0;
   color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+}
+::-webkit-scrollbar{
+  width: 8px !important; height: 8px !important;
+}
+::-webkit-scrollbar-track{
+  background: #f1f1f1 !important;
+}
+::-webkit-scrollbar-thumb{
+  background: #ff5252 !important;
+}
+::-webkit-scrollbar-thumb:hover{
+  cursor: pointer;
 }
 
 .container {
@@ -34,4 +47,88 @@ nav ul button {
 }
 nav ul button:hover {
   background: none !important;
+}
+.sliderHome {
+  overflow: inherit !important;
+}
+
+.sliderHome {
+  --swiper-navigation-color: #000;
+}
+
+.sliderHome .swiper-button-prev svg,
+.sliderHome .swiper-button-next svg {
+  width: 22px !important;
+  height: 22px !important;
+}
+
+.sliderHome .swiper-button-prev,
+.sliderHome .swiper-button-next {
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sliderHome .item {
+  height: 570px;
+}
+
+.sliderHome .item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .sliderHome .item {
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderHome .item {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderHome .item {
+    height: 180px;
+  }
+}
+
+.homeCatSlider {
+  --swiper-navigation-color: rgba(0, 0, 0, 0.8);
+}
+
+.homeCatSlider .swiper-button-prev svg,
+.homeCatSlider .swiper-button-next svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.homeCatSlider .swiper-button-prev,
+.homeCatSlider .swiper-button-next {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.homeCatSlider .item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.homeCatSlider .swiper-button-prev:hover,
+.homeCatSlider .swiper-button-next:hover{
+  background: #ff5252 !important;
+}
+
+.homeCatSlider .item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.homeCatSlider .item:hover img {
+  transform: scale(1.1);
 }
