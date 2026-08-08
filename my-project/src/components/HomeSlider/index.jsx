@@ -15,8 +15,18 @@ import banner8 from "../../assets/images/HomeSlider/banner8.jpg";
 import banner9 from "../../assets/images/HomeSlider/banner9.jpg";
 import banner10 from "../../assets/images/HomeSlider/banner10.jpg";
 
-
-const banners = [banner1, banner2, banner3, banner4, banner5, banner6, banner7,banner8, banner9, banner10];
+const banners = [
+  banner1,
+  banner2,
+  banner3,
+  banner4,
+  banner5,
+  banner6,
+  banner7,
+  banner8,
+  banner9,
+  banner10,
+];
 const HomeSlider = () => {
   return (
     <div className="HomeSlider py-4!">
@@ -33,20 +43,12 @@ const HomeSlider = () => {
         >
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-              <img
-                src={banner1}
-                alt="Banner slide"
-                className="w-full"
-              />
+              <img src={banner1} alt="Banner slide" className="w-full" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-              <img
-                src={banner2}
-                alt="Banner slide"
-                className="w-full"
-              />
+              <img src={banner2} alt="Banner slide" className="w-full" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -56,56 +58,32 @@ const HomeSlider = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-              <img
-                src={banner4}
-                alt="Banner slide"
-                className="w-full"
-              />
+              <img src={banner4} alt="Banner slide" className="w-full" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-              <img
-                src={banner5}
-                alt="Banner slide"
-                className="w-full"
-              />
+              <img src={banner5} alt="Banner slide" className="w-full" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-              <img
-                src={banner6}
-                alt="Banner slide"
-                className="w-full"
-              />
+              <img src={banner6} alt="Banner slide" className="w-full" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-              <img
-                src={banner7}
-                alt="Banner slide"
-                className="w-full"
-              />
+              <img src={banner7} alt="Banner slide" className="w-full" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-              <img
-                src={banner8}
-                alt="Banner slide"
-                className="w-full"
-              />
+              <img src={banner8} alt="Banner slide" className="w-full" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-              <img
-                src={banner9}
-                alt="Banner slide"
-                className="w-full"
-              />
+              <img src={banner9} alt="Banner slide" className="w-full" />
             </div>
           </SwiperSlide>
         </Swiper>

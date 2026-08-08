@@ -16,16 +16,17 @@ body {
   color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
 }
-::-webkit-scrollbar{
-  width: 8px !important; height: 8px !important;
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
 }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: #f1f1f1 !important;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: #ff5252 !important;
 }
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
 }
 
@@ -122,7 +123,7 @@ nav ul button:hover {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .homeCatSlider .swiper-button-prev:hover,
-.homeCatSlider .swiper-button-next:hover{
+.homeCatSlider .swiper-button-next:hover {
   background: #ff5252 !important;
 }
 
@@ -131,4 +132,16 @@ nav ul button:hover {
 }
 .homeCatSlider .item:hover img {
   transform: scale(1.1);
+}
+.MuiTabs-indicator {
+  background-color: #ff5252 !important;
+}
+.MuiTab-textColorPrimary.Mui-selected {
+  color: #ff5252 !important;
+}
+
+.productsSlider .swiper-wrapper {
+  padding: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
