@@ -1,12 +1,23 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+
+import { Navigation } from "swiper/modules";
+
 import AdsBannerSlider from "../../components/AdaBannerSlider";
 import HomeCatSlider from "../../components/HomeCatSlider";
 import HomeSlider from "../../components/HomeSlider";
 import { TbTruckDelivery } from "react-icons/tb";
 
+
+
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { useState } from "react";
 import ProductsSlider from "../../components/ProductsSlider";
+import BlogItem from "../../components/BlogItem";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   const [value, setValue] = useState(0);
@@ -93,6 +104,42 @@ const Home = () => {
 
         </div>
       </section>
+
+      <section className="py-5 pb-8 pt-0 bg-white blogSection">
+        <div className="container">
+          <h2 className="text-[20px] font-[600] !mb-4">From The Blog</h2>
+             <Swiper
+                    slidesPerView={4}
+                    spaceBetween={30}
+                    navigation={true}
+                    modules={[Navigation]}
+                    className="homeCatSlider"
+                  >
+                    <SwiperSlide>
+                      <BlogItem />
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                      <BlogItem />
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                      <BlogItem />
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                      <BlogItem />
+                    </SwiperSlide>
+                  
+                    <SwiperSlide>
+                      <BlogItem />
+                    </SwiperSlide>
+               </Swiper>
+        </div>
+      </section>
+
+      <Footer />
+      
     </>
   );
 };
