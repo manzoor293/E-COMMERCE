@@ -13,7 +13,7 @@ const BlogItem = ()=>{
           <IoMdTimer className="text-[16px]" />9 August 2026</span>
       </div>
 
-      <div className="info !py-4">
+      <div className="info py-4!">
         <h2 className="text-[15px] font-[600] text-black">
           <Link to="/" className="link">Nullam ullamcorper ornare molestie</Link>
           </h2>

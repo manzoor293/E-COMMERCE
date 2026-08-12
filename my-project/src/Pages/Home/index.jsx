@@ -10,14 +10,14 @@ import HomeCatSlider from "../../components/HomeCatSlider";
 import HomeSlider from "../../components/HomeSlider";
 import { TbTruckDelivery } from "react-icons/tb";
 
-
-
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { useState } from "react";
 import ProductsSlider from "../../components/ProductsSlider";
 import BlogItem from "../../components/BlogItem";
 import Footer from "../../components/Footer";
+import HomeBannerV2 from "../../components/HomeSliderV2";
+import BannerBoxV2 from "../../components/BannerBoxV2";
 
 const Home = () => {
   const [value, setValue] = useState(0);
@@ -29,6 +29,20 @@ const Home = () => {
   return (
     <>
       <HomeSlider />
+
+      <section className="py-6!">
+        <div className="container flex gap-5">
+          <div className="part1 w-[70%]">
+            <HomeBannerV2 />
+          </div>
+
+          <div className="part2 w-[30%] flex justify-between flex-col gap-5">
+            <BannerBoxV2 info="left" img={'https://images.pexels.com/photos/8728243/pexels-photo-8728243.jpeg'}/>
+            <BannerBoxV2 info='right' img={'https://media.istockphoto.com/id/1133462643/photo/wooden-chair-isolated-on-a-pastel-blue-background.jpg?b=1&s=612x612&w=0&k=20&c=gUa8wOQH8U3kNcoxIM3jcoIBTxh3NGgvihXnDrXzEmw='}/>
+          </div>
+        </div>
+      </section>
+
       <HomeCatSlider />
 
       <section className="bg-white py-8">
@@ -65,7 +79,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="!py-4 pt-2 bg-white">
+      <section className="py-4! pt-2 bg-white">
         <div className="container">
           <div className="freeShiping !w-[80%] !m-auto !py-4 !p-4 border-2 border-[#ff5252] flex items-center justify-between rounded-md !mb-8">
             <div className="col1 flex items-center gap-4">

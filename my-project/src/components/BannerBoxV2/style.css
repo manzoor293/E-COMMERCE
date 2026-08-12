@@ -1,0 +1,11 @@
+.bannerBoxV2 {
+  height: 275px;
+}
+.bannerBoxV2 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.bannerBoxV2 a{
+  text-decoration: underline !important;
+}
