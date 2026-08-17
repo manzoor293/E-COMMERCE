@@ -204,3 +204,8 @@ form input::placeholder{
   transition-property: right, opacity, background-color, box-shadow, border-color, color;
   transition-duration: 2.1s, 2.1s, 250ms, 250ms, 250ms, 250ms;
 }
+
+.MuiCheckbox-root{padding: 6px !important;}
+.ReactCollapse--collapse {
+  transition: height 400ms;
+}

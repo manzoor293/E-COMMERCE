@@ -5,17 +5,19 @@ import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
 
-import AdsBannerSlider from "../../components/AdaBannerSlider";
+
+import { TbTruckDelivery } from "react-icons/tb";
 import HomeCatSlider from "../../components/HomeCatSlider";
 import HomeSlider from "../../components/HomeSlider";
-import { TbTruckDelivery } from "react-icons/tb";
+import AdsBannerSlider from "../../components/AdaBannerSlider";
+import AdaBannerSliderV2 from "../../components/AdaBannerSliderV2"
+
 
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { useState } from "react";
 import ProductsSlider from "../../components/ProductsSlider";
 import BlogItem from "../../components/BlogItem";
-import Footer from "../../components/Footer";
 import HomeBannerV2 from "../../components/HomeSliderV2";
 import BannerBoxV2 from "../../components/BannerBoxV2";
 
@@ -98,7 +100,7 @@ const Home = () => {
             <p className="font-bold text-[25px]">-Only $200*</p>
           </div>
 
-          <AdsBannerSlider items={4} />
+          <AdaBannerSliderV2 items={4} />
         </div>
       </section>
 
@@ -152,7 +154,6 @@ const Home = () => {
         </div>
       </section>
 
-      <Footer />
       
     </>
   );

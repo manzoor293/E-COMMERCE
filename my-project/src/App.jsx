@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./Pages/Home";
+import Footer from "./components/Footer";
+import ProductListing from "./Pages/ProductListing";
 
 function App() {
   return (
@@ -9,7 +11,10 @@ function App() {
       <Header />
       <Routes>
         <Route path={"/"} exact={true} element={<Home />} />
+        <Route path={"/productListing"} element={<ProductListing/>}/>
       </Routes>
+      <Footer />
+
     </BrowserRouter>
   );
 }
