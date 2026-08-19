@@ -5,13 +5,11 @@ import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
 
-
 import { TbTruckDelivery } from "react-icons/tb";
 import HomeCatSlider from "../../components/HomeCatSlider";
 import HomeSlider from "../../components/HomeSlider";
 import AdsBannerSlider from "../../components/AdaBannerSlider";
-import AdaBannerSliderV2 from "../../components/AdaBannerSliderV2"
-
+import AdaBannerSliderV2 from "../../components/AdaBannerSliderV2";
 
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -39,8 +37,18 @@ const Home = () => {
           </div>
 
           <div className="part2 w-[30%] flex justify-between flex-col gap-5">
-            <BannerBoxV2 info="left" img={'https://images.pexels.com/photos/8728243/pexels-photo-8728243.jpeg'}/>
-            <BannerBoxV2 info='right' img={'https://media.istockphoto.com/id/1133462643/photo/wooden-chair-isolated-on-a-pastel-blue-background.jpg?b=1&s=612x612&w=0&k=20&c=gUa8wOQH8U3kNcoxIM3jcoIBTxh3NGgvihXnDrXzEmw='}/>
+            <BannerBoxV2
+              info="left"
+              img={
+                "https://images.pexels.com/photos/8728243/pexels-photo-8728243.jpeg"
+              }
+            />
+            <BannerBoxV2
+              info="right"
+              img={
+                "https://media.istockphoto.com/id/1133462643/photo/wooden-chair-isolated-on-a-pastel-blue-background.jpg?b=1&s=612x612&w=0&k=20&c=gUa8wOQH8U3kNcoxIM3jcoIBTxh3NGgvihXnDrXzEmw="
+              }
+            />
           </div>
         </div>
       </section>
@@ -83,16 +91,16 @@ const Home = () => {
 
       <section className="py-4! pt-2 bg-white">
         <div className="container">
-          <div className="freeShiping !w-[80%] !m-auto !py-4 !p-4 border-2 border-[#ff5252] flex items-center justify-between rounded-md !mb-8">
+          <div className="freeShiping w-[80%]! m-auto! py-4! p-4! border-2 border-primary flex items-center justify-between rounded-md mb-8!">
             <div className="col1 flex items-center gap-4">
               <TbTruckDelivery className="text-[50px]" />
-              <span className="text-[20px] font-[600] uppercase">
+              <span className="text-[20px] font-semibold uppercase">
                 Free Shipping
               </span>
             </div>
 
             <div className="col2">
-              <p className="mb-0 font-[500]">
+              <p className="mb-0 font-medium">
                 Free Delivery Now on your First order and over $200
               </p>
             </div>
@@ -114,47 +122,44 @@ const Home = () => {
 
       <section className="py-5 pt-0 bg-white">
         <div className="container">
-          <h2 className="text-[20px] font-[600]">Featured Products</h2>
+          <h2 className="text-[20px] font-semibold">Featured Products</h2>
           <ProductsSlider items={6} />
           <AdsBannerSlider items={3} />
-
         </div>
       </section>
 
       <section className="py-5 pb-8 pt-0 bg-white blogSection">
         <div className="container">
           <h2 className="text-[20px] font-[600] !mb-4">From The Blog</h2>
-             <Swiper
-                    slidesPerView={4}
-                    spaceBetween={30}
-                    navigation={true}
-                    modules={[Navigation]}
-                    className="homeCatSlider"
-                  >
-                    <SwiperSlide>
-                      <BlogItem />
-                    </SwiperSlide>
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            navigation={true}
+            modules={[Navigation]}
+            className="homeCatSlider"
+          >
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
 
-                    <SwiperSlide>
-                      <BlogItem />
-                    </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
 
-                    <SwiperSlide>
-                      <BlogItem />
-                    </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
 
-                    <SwiperSlide>
-                      <BlogItem />
-                    </SwiperSlide>
-                  
-                    <SwiperSlide>
-                      <BlogItem />
-                    </SwiperSlide>
-               </Swiper>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
-
-      
     </>
   );
 };

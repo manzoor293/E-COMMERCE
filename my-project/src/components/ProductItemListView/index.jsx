@@ -3,14 +3,15 @@ import Rating from "@mui/material/Rating";
 import { MdZoomOutMap } from "react-icons/md";
 import { IoGitCompareOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 import "./style.css";
 import Button from "@mui/material/Button";
 
 const ProductItem = () => {
   return (
-    <div className="productItem shadow-lg rounded-md overflow-hidden border border-[rgba(0,0,0,0.1)]">
-      <div className="group imgWrapper w-full! rounded-md relative">
+    <div className="productItem shadow-lg rounded-md overflow-hidden border border-[rgba(0,0,0,0.1)] flex items-center">
+      <div className="group imgWrapper w-[25%]! rounded-md relative">
         <Link to="/">
           <div className="img h-62.5! overflow-hidden relative">
             <img
@@ -44,17 +45,22 @@ const ProductItem = () => {
         </div>
       </div>
 
-      <div className="info p-3! py-5!">
-        <h6 className="text-[13px]">
+      <div className="info p-3! py-5! px-8! w-[75%]">
+        <h6 className="text-[15px]">
           <Link to="/" className="link tansition-all">
             Soylent Green
           </Link>
         </h6>
-        <h3 className="text-[13px] title mt-1 font-medium text-[rgba(0,0,0,0.9)] mb-1">
+        <h3 className="text-[18px] title mt-3! mb-3! font-medium text-[rgba(0,0,0,0.9)] ">
           <Link to="/" className="link tansition-all">
             Hanes Men's Zip-up Hoodie
           </Link>
         </h3>
+
+        <p className="text-[14px] text-[rgba(0,0,0,0.7)] mb-3!">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout.{" "}
+        </p>
         <Rating name="size-small" defaultValue={4} size="small" readOnly />
 
         <div className="flex items-center gap-4">
@@ -65,6 +71,10 @@ const ProductItem = () => {
             $40.00
           </span>
         </div>
+
+        <Button className="btn-org mt-3! flex gap-2">
+          <MdOutlineShoppingCart className="text-[20px]" /> Add to Cart
+        </Button>
       </div>
     </div>
   );

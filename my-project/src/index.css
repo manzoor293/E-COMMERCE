@@ -35,8 +35,16 @@ body {
   margin: auto;
 }
 
-.btn-org{background:#ff5252 !important; color : #fff !important; font-weight: 500 !important; font-size: 16px !important; padding: 7px 20px !important;}
-
+.btn-org {
+  background: #ff5252 !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  padding: 7px 20px !important;
+}
+.btn-org:hover {
+  background: #171717 !important;
+}
 .link:hover {
   color: #ff5252;
 }
@@ -148,64 +156,75 @@ nav ul button:hover {
   margin-right: -15px;
 }
 
-form input::placeholder{
+form input::placeholder {
   font-size: 14px;
 }
 
-.css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root{
+.css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root {
   color: #ff5252 !important;
 }
 
-.MuiFormControlLabel-label{
+.MuiFormControlLabel-label {
   font-size: 13px !important;
   color: rgba(0, 0, 0, 0.8) !important;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   background: #9b9393 !important;
   opacity: 1 !important;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background: #ff5252 !important;
 }
 
+.sliderHome .swiper-slide-active .info {
+  right: 0 !important;
+  opacity: 1 !important;
+}
+.sliderHome .swiper-slide-active .info h4 {
+  right: 0 !important;
+  opacity: 1 !important;
+}
+.sliderHome .swiper-slide-active .info h2 {
+  right: 0 !important;
+  opacity: 1 !important;
+}
+.sliderHome .swiper-slide-active .info h3 {
+  right: 0 !important;
+  opacity: 1 !important;
+}
+.sliderHome .swiper-slide-active .info Button {
+  right: 0 !important;
+  opacity: 1 !important;
+}
 
-.sliderHome .swiper-slide-active .info{
-  right: 0 !important;
-  opacity: 1 !important;
-}
-.sliderHome .swiper-slide-active .info h4{
-  right: 0 !important;
-  opacity: 1 !important;
-}.sliderHome .swiper-slide-active .info h2{
-  right: 0 !important;
-  opacity: 1 !important;
-}
-.sliderHome .swiper-slide-active .info h3{
-  right: 0 !important;
-  opacity: 1 !important;
-}
-.sliderHome .swiper-slide-active .info Button{
-  right: 0 !important;
-  opacity: 1 !important;
-}
-
-.sliderHome .info h4{
+.sliderHome .info h4 {
   transition-duration: 1.2s;
 }
-.sliderHome .info h2{
+.sliderHome .info h2 {
   transition-duration: 1.5s;
 }
-.sliderHome .info h3{
+.sliderHome .info h3 {
   transition-duration: 1.8s;
 }
-.sliderHome .info Button{
-  transition-property: right, opacity, background-color, box-shadow, border-color, color;
+.sliderHome .info Button {
+  transition-property:
+    right, opacity, background-color, box-shadow, border-color, color;
   transition-duration: 2.1s, 2.1s, 250ms, 250ms, 250ms, 250ms;
 }
 
-.MuiCheckbox-root{padding: 6px !important;}
+.MuiCheckbox-root {
+  padding: 6px !important;
+}
 .ReactCollapse--collapse {
   transition: height 400ms;
+}
+.itemViewActions button.active svg {
+  color: #ff5252 !important;
+  opacity: 1 !important;
+}
+.Mui-selected.MuiPaginationItem-page {
+  background-color: #ff5252 !important;
+  color: #fff !important;
 }

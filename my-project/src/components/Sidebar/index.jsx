@@ -116,11 +116,6 @@ const Sidebar = () => {
          <div className="w-full">
           <Rating name="size-small" defaultValue={1} size="small" readOnly />
         </div>
-
-        
-      
-
-        
       </div>
 
     </aside>
