@@ -13,8 +13,12 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   background: #f5f0f0;
-  color: rgba(0, 0, 0, 0.9);
+  color: #666;
   overflow-x: hidden;
+}
+p {
+  font-size: 14px;
+  line-height: 25px;
 }
 ::-webkit-scrollbar {
   width: 8px !important;
@@ -122,11 +126,11 @@ nav ul button:hover {
 
 .homeCatSlider .swiper-button-prev,
 .homeCatSlider .swiper-button-next {
-  width: 30px;
-  height: 30px;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 30px !important;
+  height: 30px !important;
+  background: #fff !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
 }
 
 .homeCatSlider .item {
@@ -227,4 +231,32 @@ form input::placeholder {
 .Mui-selected.MuiPaginationItem-page {
   background-color: #ff5252 !important;
   color: #fff !important;
+}
+.zoomProductSliderThumbs .swiper-slide {
+  height: 120px !important;
+}
+.zoomProductSliderThumbs .swiper-wrapper {
+  padding-top: 38px !important;
+}
+.zoomProductSliderThumbs .swiper-button-prev,
+.zoomProductSliderThumbs .swiper-button-next {
+  width: 100% !important;
+  left: 0px !important;
+  right: inherit !important;
+  height: 30px !important;
+  margin: 0 !important;
+  border-radius: 0px !important;
+  --swiper-navigation-size: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.zoomProductSliderThumbs .swiper-button-prev {
+  top: 0px !important;
+}
+
+.zoomProductSliderThumbs .swiper-button-next {
+  bottom: 0px !important;
+  top: auto !important;
 }

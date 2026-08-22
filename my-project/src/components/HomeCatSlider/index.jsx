@@ -21,7 +21,7 @@ const fashions = [fashion1, fashion2, fashion3, fashion4];
 
 const HomeCatSlider = () => {
   return (
-    <div className="homeCatSlider !py-8  !pt-4">
+    <div className="homeCatSlider py-8!  pt-4!">
       <div className="container">
         <Swiper
           slidesPerView={8}
@@ -32,81 +32,101 @@ const HomeCatSlider = () => {
         >
           <SwiperSlide>
             <Link to="/">
-              <div className="item !py-3 !px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
-                <img src={fashion1} alt="Fashion" className="!w-[150px]" />
-                <h3 className="!text-[15px] font-[500] !mt-3">Smart Tablet</h3>
+              <div className="item py-3! px-3! bg-white rounded-sm text-center flex items-center justify-center flex-col">
+                <img src={fashion1} alt="Fashion" className="!w-37.5!" />
+                <h3 className="text-[15px]! font-medium! mt-3!">
+                  Smart Tablet
+                </h3>
               </div>
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/">
-              <div className="item !py-3 !px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
-                <img src={fashion2} alt="Fashion" className="!w-[150px]" />
-                <h3 className="!text-[15px] font-[500] !mt-3">Smart Tablet</h3>
+              <div className="item py-3! px-3! bg-white rounded-sm text-center flex items-center justify-center flex-col">
+                <img src={fashion2} alt="Fashion" className="!w-37.5!" />
+                <h3 className="text-[15px]! font-medium! mt-3!">
+                  Smart Tablet
+                </h3>
               </div>
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/">
-              <div className="item !py-3 !px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
-                <img src={fashion3} alt="Fashion" className="!w-[150px]" />
-                <h3 className="!text-[15px] font-[500] !mt-3">Smart Tablet</h3>
+              <div className="item py-3! px-3! bg-white rounded-sm text-center flex items-center justify-center flex-col">
+                <img src={fashion3} alt="Fashion" className="!w-37.5!" />
+                <h3 className="text-[15px]! font-medium! mt-3!">
+                  Smart Tablet
+                </h3>
               </div>
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/">
-              <div className="item !py-3 !px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
-                <img src={fashion4} alt="Fashion" className="!w-[150px]" />
-                <h3 className="!text-[15px] font-[500] !mt-3">Smart Tablet</h3>
+              <div className="item py-3! px-3! bg-white rounded-sm text-center flex items-center justify-center flex-col">
+                <img src={fashion4} alt="Fashion" className="!w-37.5!" />
+                <h3 className="text-[15px]! font-medium! mt-3!">
+                  Smart Tablet
+                </h3>
               </div>
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/">
-              <div className="item !py-3 !px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
-                <img src={fashion4} alt="Fashion" className="!w-[150px]" />
-                <h3 className="!text-[15px] font-[500] !mt-3">Smart Tablet</h3>
+              <div className="item py-3! px-3! bg-white rounded-sm text-center flex items-center justify-center flex-col">
+                <img src={fashion4} alt="Fashion" className="!w-37.5!" />
+                <h3 className="text-[15px]! font-medium! mt-3!">
+                  Smart Tablet
+                </h3>
               </div>
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/">
-              <div className="item !py-3 !px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
-                <img src={fashion4} alt="Fashion" className="!w-[150px]" />
-                <h3 className="!text-[15px] font-[500] !mt-3">Smart Tablet</h3>
+              <div className="item py-3! px-3! bg-white rounded-sm text-center flex items-center justify-center flex-col">
+                <img src={fashion4} alt="Fashion" className="!w-37.5!" />
+                <h3 className="text-[15px]! font-medium! mt-3!">
+                  Smart Tablet
+                </h3>
               </div>
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/">
-              <div className="item !py-3 !px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
-                <img src={fashion4} alt="Fashion" className="!w-[150px]" />
-                <h3 className="!text-[15px] font-[500] !mt-3">Smart Tablet</h3>
+              <div className="item py-3! px-3! bg-white rounded-sm text-center flex items-center justify-center flex-col">
+                <img src={fashion4} alt="Fashion" className="!w-37.5!" />
+                <h3 className="text-[15px]! font-medium! mt-3!">
+                  Smart Tablet
+                </h3>
               </div>
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/">
-              <div className="item !py-3 !px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
-                <img src={fashion4} alt="Fashion" className="!w-[150px]" />
-                <h3 className="!text-[15px] font-[500] !mt-3">Smart Tablet</h3>
+              <div className="item py-3! px-3! bg-white rounded-sm text-center flex items-center justify-center flex-col">
+                <img src={fashion4} alt="Fashion" className="!w-37.5!" />
+                <h3 className="text-[15px]! font-medium! mt-3!">
+                  Smart Tablet
+                </h3>
               </div>
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/">
-              <div className="item !py-3 !px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
-                <img src={fashion4} alt="Fashion" className="!w-[150px]" />
-                <h3 className="!text-[15px] font-[500] !mt-3">Smart Tablet</h3>
+              <div className="item py-3! px-3! bg-white rounded-sm text-center flex items-center justify-center flex-col">
+                <img src={fashion4} alt="Fashion" className="!w-37.5!" />
+                <h3 className="text-[15px]! font-medium! mt-3!">
+                  Smart Tablet
+                </h3>
               </div>
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/">
-              <div className="item !py-3 !px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col">
-                <img src={fashion4} alt="Fashion" className="!w-[150px]" />
-                <h3 className="!text-[15px] font-[500] !mt-3">Smart Tablet</h3>
+              <div className="item py-3! px-3! bg-white rounded-sm text-center flex items-center justify-center flex-col">
+                <img src={fashion4} alt="Fashion" className="!w-37.5!" />
+                <h3 className="text-[15px]! font-medium! mt-3!">
+                  Smart Tablet
+                </h3>
               </div>
             </Link>
           </SwiperSlide>
