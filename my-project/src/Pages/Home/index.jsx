@@ -105,7 +105,7 @@ const Home = () => {
               </p>
             </div>
 
-            <p className="font-bold text-[25px]">-Only $200*</p>
+            <p className="font-bold text-[25px]">Only $200*</p>
           </div>
 
           <AdaBannerSliderV2 items={4} />
