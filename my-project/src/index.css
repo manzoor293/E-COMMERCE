@@ -59,6 +59,10 @@ h6 {
 .btn-org:hover {
   background: #171717 !important;
 }
+.btn-lg {
+  font-size: 18px !important;
+  padding: 10px 20px !important;
+}
 .link:hover {
   color: #ff5252;
 }
@@ -270,6 +274,9 @@ form input::placeholder {
   bottom: 0px !important;
   top: auto !important;
 }
+.productContent {
+  padding: 16px !important;
+}
 .productContent .actions button {
   min-width: 40px !important;
   height: 30px !important;
@@ -287,4 +294,11 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .reviewScroll::-webkit-scrollbar-thumb {
   background: #ccc !important;
+}
+.css-kw13he-MuiDialogContent-root {
+  padding: 0px !important;
+  overflow-y: hidden !important;
+}
+.cartPanel .MuiPaper-root {
+  width: 400px !important;
 }

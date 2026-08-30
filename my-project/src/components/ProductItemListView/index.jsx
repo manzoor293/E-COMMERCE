@@ -7,8 +7,12 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 
 import "./style.css";
 import Button from "@mui/material/Button";
+import { myContext } from "../../App";
+import { useContext } from "react";
 
 const ProductItem = () => {
+  const context = useContext(myContext);
+
   return (
     <div className="productItem shadow-lg rounded-md overflow-hidden border border-[rgba(0,0,0,0.1)] flex items-center">
       <div className="group imgWrapper w-[25%]! rounded-md relative">
@@ -31,7 +35,10 @@ const ProductItem = () => {
         </span>
 
         <div className="actions absolute -top-50 right-1.25 z-50 flex items-center gap-2 flex-col w-12.5 transition-all duration-300 group-hover:top-3.75 opacity-0 group-hover:opacity-100">
-          <Button className="w-8.75! h-8.75! min-w-8.75! rounded-full! bg-gray-500! text-black! hover:bg-red-500! hover:text-white! group">
+          <Button
+            className="w-8.75! h-8.75! min-w-8.75! rounded-full! bg-gray-500! text-black! hover:bg-red-500! hover:text-white! group"
+            onClick={() => context.setOpenProductDetailsModal(true)}
+          >
             <MdZoomOutMap className="text-[18px] text-black group-hover:text-white!" />
           </Button>
 

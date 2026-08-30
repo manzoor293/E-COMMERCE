@@ -114,7 +114,7 @@ const Home = () => {
 
       <section className="py-5 pt-0 bg-white">
         <div className="container">
-          <h2 className="text-[20px] font-[600]">Latest Products</h2>
+          <h2 className="text-[20px] font-semibold">Latest Products</h2>
           <ProductsSlider items={6} />
           <AdsBannerSlider items={4} />
         </div>

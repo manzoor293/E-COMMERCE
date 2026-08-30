@@ -8,6 +8,8 @@ import { IoGitCompareOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
 import Tooltip from "@mui/material/Tooltip";
 import Navigation from "../Header/Navigation/index";
+import { myContext } from "../../App";
+import { useContext } from "react";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -19,6 +21,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Header = () => {
+  const context = useContext(myContext);
   return (
     <header className="bg-white">
       <div className="top-strip py-2 border-t-[1px]border-b-[1px] border-gray-250">
@@ -55,7 +58,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="header py-4 border-b-[1px] border-gray-250">
+      <div className="header py-4 border-b border-gray-250">
         <div className="container flex items-center justify-between">
           <div className="col1 w-[30%]">
             <Link to={"/"}>
@@ -70,19 +73,19 @@ const Header = () => {
             <Search />
           </div>
 
-          <div className="col3 w-[30%] flex items-center !pl-7">
+          <div className="col3 w-[30%] flex items-center pl-7!">
             <ul className="flex items-center justify-end gap-3 w-full">
               <li className="list-none">
                 <Link
                   to="/login"
-                  className="link transition text-[15px] font-[500]"
+                  className="link transition text-[15px] font-medium"
                 >
                   Login
                 </Link>{" "}
                 | &nbsp;
                 <Link
                   to="/register"
-                  className="link transition text-[15px] font-[500]"
+                  className="link transition text-[15px] font-medium"
                 >
                   Register
                 </Link>
@@ -110,7 +113,10 @@ const Header = () => {
 
               <li>
                 <Tooltip title="Cart">
-                  <IconButton aria-label="cart">
+                  <IconButton
+                    aria-label="cart"
+                    onClick={() => context.setOpenCartPanel(true)}
+                  >
                     <StyledBadge badgeContent={4} color="secondary">
                       <MdOutlineShoppingCart />
                     </StyledBadge>
