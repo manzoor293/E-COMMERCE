@@ -16,6 +16,7 @@ import Button from "@mui/material/Button";
 import ProductDetailsComponent from "./components/ProductDetailsComponent";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import CartPage from "./Pages/Cart";
 
 const myContext = createContext();
 
@@ -25,7 +26,7 @@ function App() {
 
   const [openProductDetailsModal, setOpenProductDetailsModal] = useState(false);
 
-  const [openCartPanel, setOpenCartPanel] = useState(true);
+  const [openCartPanel, setOpenCartPanel] = useState(false);
 
   const handleCloseProductDetailsModal = () => {
     setOpenProductDetailsModal(false);
@@ -56,6 +57,7 @@ function App() {
             />
             <Route path={"/login"} exact={true} element={<Login />} />
             <Route path={"/register"} exact={true} element={<Register />} />
+            <Route path={"/cart"} exact={true} element={<CartPage />} />
           </Routes>
 
           <Footer />
