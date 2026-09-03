@@ -1,13 +1,25 @@
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { myContext } from "../../App";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(true);
+  const [formFields, setFormFields] = useState({
+    email: "",
+    password: "",
+  });
+  const context = useContext(myContext);
+  const history = useNavigate();
+
+  const forgotPassword = () => {
+    context.openAlertBox("success", "OTP Send");
+    history("/verify");
+  };
   return (
     <section className="section py-10!">
       <div className="container">
@@ -24,6 +36,7 @@ const Login = () => {
                 label="Email Id *"
                 variant="outlined"
                 className="w-full!"
+                name="name"
               />
             </div>
             <div className="form-group w-full! mb-5! relative">
@@ -33,6 +46,7 @@ const Login = () => {
                 label="Password *"
                 variant="outlined"
                 className="w-full!"
+                name="password"
               />
               <Button
                 className="absolute! top-2.5! right-2.5! z-50 w-8.75! h-8.75! min-w-8.75! rounded-full! text-black!"
@@ -46,12 +60,12 @@ const Login = () => {
               </Button>
             </div>
 
-            <a
-              href=""
-              className="link text-[14px]! font-semibold cursor-pointer! "
+            <span
+              className="link text-[14px]! font-semibold cursor-pointer! block mb-2"
+              onClick={forgotPassword}
             >
               Forgot Password?
-            </a>
+            </span>
 
             <div className="flex items-center w-full! mt-3!">
               <Button className="btn-org btn-lg w-full!">Login</Button>
