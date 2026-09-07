@@ -1,8 +1,11 @@
 import { MdOutlineDeleteOutline } from "react-icons/md";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+import { myContext } from "../../App";
+import { useContext } from "react";
 
 const CartPanel = () => {
+  const context = useContext(myContext);
   return (
     <>
       <div className="scroll! w-full! max-h-75! overflow-y-scroll! overflow-x-hidden! py-3! px-4!">
@@ -215,10 +218,18 @@ const CartPanel = () => {
           <br />
 
           <div className="flex items-center justify-between w-full gap-5!">
-            <Link to="/cart" className="w-[50%] d-block">
+            <Link
+              to="/cart"
+              className="w-[50%] d-block"
+              onClick={() => context.setOpenCartPanel(false)}
+            >
               <Button className="btn-org btn-lg w-full ">View Cart</Button>
             </Link>
-            <Link to="/checkout" className="w-[50%] d-block">
+            <Link
+              to="/checkout"
+              className="w-[50%] d-block"
+              onClick={() => myContext.setOpenCartPanel(false)}
+            >
               <Button className="btn-org btn-lg w-full ">Checkout</Button>
             </Link>
           </div>

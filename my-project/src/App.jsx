@@ -22,6 +22,7 @@ import Verify from "./Pages/Verify";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import ForgotPassword from "./Pages/ForgotPassword";
+import Checkout from "./Pages/Checkout";
 
 const myContext = createContext();
 
@@ -78,6 +79,8 @@ function App() {
             <Route path={"/login"} exact={true} element={<Login />} />
             <Route path={"/register"} exact={true} element={<Register />} />
             <Route path={"/cart"} exact={true} element={<CartPage />} />
+            <Route path={"/checkout"} exact={true} element={<Checkout />} />
+
             <Route path={"/verify"} exact={true} element={<Verify />} />
             <Route
               path={"/forgot-password"}
