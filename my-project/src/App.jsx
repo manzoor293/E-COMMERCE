@@ -23,12 +23,14 @@ import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import ForgotPassword from "./Pages/ForgotPassword";
 import Checkout from "./Pages/Checkout";
+import MyAccount from "./Pages/MyAccount";
 
 const myContext = createContext();
 
 function App() {
-  const [maxWidth, setMaxWidth] = useState("xl");
-  const [fullWidth, setFullWidth] = useState(true);
+  const [maxWidth] = useState("xl");
+  const [fullWidth] = useState(true);
+  const [isLogin, setIsLogin] = useState(true);
 
   const [openProductDetailsModal, setOpenProductDetailsModal] = useState(false);
 
@@ -57,6 +59,8 @@ function App() {
     setOpenCartPanel,
     openCartPanel,
     openAlertBox,
+    isLogin,
+    setIsLogin,
   };
 
   return (
@@ -87,6 +91,7 @@ function App() {
               exact={true}
               element={<ForgotPassword />}
             />
+            <Route path={"/my-account"} exact={true} element={<MyAccount />} />
           </Routes>
 
           <Footer />

@@ -54,7 +54,7 @@ const CartPanel = () => {
             <h4 className="text-[14px]! font-medium!">
               <Link to="/product/45875" className="link transition-all">
                 {" "}
-                Men's Streetwear Black Jean Jacket and Black Pants Combo{" "}
+                Men's Streetwear Black Jean Jacket and Black Pants Combo
               </Link>
             </h4>
 
@@ -83,7 +83,6 @@ const CartPanel = () => {
           <div className="info w-[75%]! pr-5! relative">
             <h4 className="text-[14px]! font-medium!">
               <Link to="/product/45875" className="link transition-all">
-                {" "}
                 Men's Streetwear Black Jean Jacket and Black Pants Combo{" "}
               </Link>
             </h4>
@@ -230,7 +229,9 @@ const CartPanel = () => {
               className="w-[50%] d-block"
               onClick={() => myContext.setOpenCartPanel(false)}
             >
-              <Button className="btn-org btn-lg w-full ">Checkout</Button>
+              <Button className="btn-org btn-lg btn-border w-full ">
+                Checkout
+              </Button>
             </Link>
           </div>
         </div>
