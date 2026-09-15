@@ -24,6 +24,8 @@ import Alert from "@mui/material/Alert";
 import ForgotPassword from "./Pages/ForgotPassword";
 import Checkout from "./Pages/Checkout";
 import MyAccount from "./Pages/MyAccount";
+import MyList from "./Pages/MyList";
+import Orders from "./Pages/Orders";
 
 const myContext = createContext();
 
@@ -92,6 +94,8 @@ function App() {
               element={<ForgotPassword />}
             />
             <Route path={"/my-account"} exact={true} element={<MyAccount />} />
+            <Route path={"/my-list"} exact={true} element={<MyList />} />
+            <Route path={"/my-orders"} exact={true} element={<Orders />} />
           </Routes>
 
           <Footer />

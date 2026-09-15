@@ -49,6 +49,9 @@ h6 {
 .scroll::-webkit-scrollbar-thumb {
   background: #ccc !important;
 }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ccc !important;
+}
 
 .container {
   width: 95%;
@@ -81,6 +84,10 @@ h6 {
 .btn-lg {
   font-size: 14px !important;
   padding: 10px 20px !important;
+}
+.btn-sm {
+  font-size: 12px !important;
+  padding: 5px 20px !important;
 }
 .link:hover {
   color: #ff5252;
