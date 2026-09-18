@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 180" width="100%" height="100%" class="apna-mall-logo">
+  <defs>
+    <!-- CSS Custom Properties for Instant Color Customization -->
+    <style>
+      .apna-mall-logo {
+        background-color: transparent; /* Easily change container background via CSS */
+      }
+      .brand-primary { fill: #1E3A8A; } /* Primary Blue */
+      .brand-accent { fill: #D97706; }  /* Gold/Orange Accent */
+      .brand-tagline { fill: #475569; } /* Tagline Slate Gray */
+    </style>
+
+    <!-- Gradients -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+
+  <!-- HORIZONTAL LOGO GROUP -->
+  <g transform="translate(10, 0)">
+    
+    <!-- ICON: Shopping Cart + Growth/Mall Graphic -->
+    <g transform="translate(10, 15)">
+      <!-- Outer Arch -->
+      <path d="M 30 110 A 65 65 0 1 1 135 110" fill="none" stroke="url(#blueGrad)" stroke-width="12" stroke-linecap="round" />
+      <path d="M 42 110 A 52 52 0 1 1 123 110" fill="none" stroke="url(#goldGrad)" stroke-width="6" stroke-linecap="round" />
+
+      <!-- Mall/Buildings Silhouette in Cart -->
+      <path d="M 45 105 L 45 75 L 60 75 L 60 105 Z" fill="url(#goldGrad)" />
+      <path d="M 105 105 L 105 70 L 120 70 L 120 105 Z" fill="url(#goldGrad)" />
+
+      <!-- Shopping Cart Base & Wheels -->
+      <path d="M 25 45 L 40 45 L 55 100 L 125 100 L 135 60 L 50 60" fill="none" stroke="url(#blueGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="68" cy="116" r="9" fill="url(#blueGrad)" />
+      <circle cx="112" cy="116" r="9" fill="url(#blueGrad)" />
+
+      <!-- Rising Trend Arrow (M-Shape Center) -->
+      <path d="M 50 90 L 70 65 L 85 80 L 115 40" fill="none" stroke="url(#blueGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M 100 40 L 115 40 L 115 55" fill="none" stroke="url(#blueGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- TYPOGRAPHY: Horizontal Alignment -->
+    <g transform="translate(180, 0)">
+      <!-- Main Brand Name -->
+      <text x="0" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif" font-size="64" font-weight="900" class="brand-primary" letter-spacing="-0.5">
+        APNA <tspan class="brand-primary">MALL</tspan>
+      </text>
+
+      <!-- Subtitle / Tagline -->
+      <text x="5" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif" font-size="22" font-weight="500" class="brand-tagline" letter-spacing="0.5">
+        Your Trusted Marketplace
+      </text>
+    </g>
+
+  </g>
+</svg>

@@ -41,43 +41,42 @@ const Header = () => {
   const context = useContext(myContext);
   return (
     <header className="bg-white">
-      <div className="top-strip py-2 border-t-[1px]border-b-[1px] border-gray-250">
-        <div className="container">
-          <div className="flex item-center justify-between">
-            <div className="col1 w-[50%]">
-              <p className="text-[12px]font-[500]">
-                Get up to 50% off new season styles, limited time only!
-              </p>
-            </div>
+      <div className="top-strip py-2 border-t-[1px]border-b-[1px] border-gray-250 hidden sm:block">
+        <div className="container flex flex-wrap md:flex-nowrap items-center justify-between gap-3">
+          <div className="w-full sm:w-1/2">
+            <p className="text-center text-[11px] font-medium sm:text-left sm:text-[12px]">
+              Get up to 50% off new season styles, limited time only!
+            </p>
+          </div>
 
-            <div className="col2 flex items-center justify-end w-[50%]">
-              <ul className="flex items-center gap-3">
-                <li className="list-none">
-                  <Link
-                    to="/help-center"
-                    className="text-[13px]font-[500] link transition"
-                  >
-                    Help Center
-                  </Link>
-                </li>
+          <div className="col2 flex items-center justify-end w-[50%]">
+            <ul className="flex items-center gap-3">
+              <li className="list-none">
+                <Link
+                  to="/help-center"
+                  className="text-[13px]font-[500] link transition"
+                >
+                  Help Center
+                </Link>
+              </li>
 
-                <li className="list-none">
-                  <Link
-                    to="/order-tracking"
-                    className="text-[13px]font-[500] link transition"
-                  >
-                    Order Tracking
-                  </Link>
-                </li>
-              </ul>
-            </div>
+              <li className="list-none">
+                <Link
+                  to="/order-tracking"
+                  className="text-[13px]font-[500] link transition"
+                >
+                  Order Tracking
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
       <div className="header py-4 border-b border-gray-250">
         <div className="container flex items-center justify-between">
-          <div className="col1 w-[30%]">
+          <div className="col1 w-1/2 md:w-[30%]">
+            {" "}
             <Link to={"/"}>
               <img
                 src="/logo.png"
@@ -86,11 +85,13 @@ const Header = () => {
               />
             </Link>
           </div>
-          <div className="col2 w-[40%]">
+          <div className="col2 order-3 w-full md:order-none md:w-[40%]">
+            {" "}
             <Search />
           </div>
 
-          <div className="col3 w-[35%] flex items-center pl-7!">
+          <div className="col3 w-1/2 md:w-[35%] flex items-center justify-end pl-7!">
+            {" "}
             <ul className="flex items-center justify-end gap-3 w-full">
               {context.isLogin === false ? (
                 <li className="list-none">
