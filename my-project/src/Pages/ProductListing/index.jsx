@@ -139,7 +139,7 @@ const ProductListing = () => {
               </div>
 
               <div
-                className={`grid ${itemView === "grid" ? "grid-cols-2 md:grid-cols-4" : "grid-cols-1 md:grid-cols-1"} gap-4`}
+                className={`grid ${itemView === "grid" ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4" : "grid-cols-1"} gap-4`}
               >
                 {itemView === "grid" ? (
                   <>

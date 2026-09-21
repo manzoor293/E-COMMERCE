@@ -5,14 +5,14 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 const Checkout = () => {
   return (
     <section className="py-10!">
-      <div className="container flex gap-5">
-        <div className="leftCol w-[70%]">
+      <div className="container flex flex-col md:flex-row gap-5">
+        <div className="leftCol w-full md:w-[70%]">
           <div className="card bg-white shadow-md rounded-md  p-5! w-full ">
             <h1>Billing details</h1>
 
             <form action="" className="w-full mt-5!">
-              <div className="flex items-center gap-5 pb-5!">
-                <div className="col w-[50%]">
+              <div className="flex flex-col sm:flex-row items-center gap-5 pb-5!">
+                <div className="col w-full sm:w-[50%]">
                   <TextField
                     className="w-full"
                     label="Full Name"
@@ -20,9 +20,8 @@ const Checkout = () => {
                     size="small"
                   />
                 </div>
-                <div className="col w-[50%]">
+                <div className="col w-full sm:w-[50%]">
                   <TextField
-                    type="email"
                     className="w-full"
                     label="Email"
                     variant="outlined"
@@ -33,8 +32,8 @@ const Checkout = () => {
 
               <h5 className="text-[14px] font-medium mb-3!">Street Adress *</h5>
 
-              <div className="flex items-center gap-5 pb-5!">
-                <div className="col w-full">
+              <div className="flex flex-col sm:flex-row items-center gap-5 pb-5!">
+                <div className="col w-full sm:w-[50%]">
                   <TextField
                     className="w-full"
                     label="House No. and Street Name"
@@ -44,8 +43,8 @@ const Checkout = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-5 pb-5!">
-                <div className="col w-full">
+              <div className="flex flex-col sm:flex-row items-center gap-5 pb-5!">
+                <div className="col w-full sm:w-[50%]">
                   <TextField
                     className="w-full"
                     label="Apartment, suit, unit, etc. (optional)"
@@ -55,8 +54,8 @@ const Checkout = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-5 pb-5!">
-                <div className="col w-[50%]">
+              <div className="flex flex-col sm:flex-row items-center gap-5 pb-5!">
+                <div className="col w-full sm:w-[50%]">
                   <TextField
                     className="w-full"
                     label="Touwn / City *"
@@ -64,7 +63,7 @@ const Checkout = () => {
                     size="small"
                   />
                 </div>
-                <div className="col w-[50%]">
+                <div className="col w-full sm:w-[50%]">
                   <TextField
                     type="text"
                     className="w-full"
@@ -111,7 +110,7 @@ const Checkout = () => {
             </form>
           </div>
         </div>
-        <div className="righCol w-[30%]">
+        <div className="righCol w-full md:w-[30%]">
           <div className="card shadow-md bg-white p-5! rounded-md">
             <h2 className="mb-4! ">Your Order</h2>
             <div className="flex items-center justify-between py-3! border-t border-b border-[rgba(0,0,0,0.1)]">
@@ -122,11 +121,11 @@ const Checkout = () => {
             <div className="mb-5! scroll max-h-62.5! overflow-y-scroll overflow-x-hidden pr-2!">
               <div className="flex items-center justify-between py-2!">
                 <div className="part1 flex items-center gap-3">
-                  <div className="img w-12.5! h-12.5! object-cover overflow-hidden rounded-md group cursor-pointer">
+                  <div className="img w-12.5! h-12.5! overflow-hidden rounded-md group cursor-pointer">
                     <img
                       src="https://images.pexels.com/photos/9939536/pexels-photo-9939536.jpeg"
                       alt=""
-                      className="w-full transition-all group-hover:scale-105"
+                      className="w-full h-full object-cover! transition-all group-hover:scale-105"
                     />
                   </div>
                   <div className="info">
@@ -155,11 +154,11 @@ const Checkout = () => {
               </div>
               <div className="flex items-center justify-between py-2!">
                 <div className="part1 flex items-center gap-3">
-                  <div className="img w-12.5! h-12.5! object-cover overflow-hidden rounded-md group cursor-pointer">
+                  <div className="img w-12.5! h-12.5! overflow-hidden rounded-md group cursor-pointer">
                     <img
                       src="https://images.pexels.com/photos/9939536/pexels-photo-9939536.jpeg"
                       alt=""
-                      className="w-full transition-all group-hover:scale-105"
+                      className="w-full h-full object-cover! transition-all group-hover:scale-105"
                     />
                   </div>
                   <div className="info">
@@ -171,11 +170,11 @@ const Checkout = () => {
               </div>
               <div className="flex items-center justify-between py-2!">
                 <div className="part1 flex items-center gap-3">
-                  <div className="img w-12.5! h-12.5! object-cover overflow-hidden rounded-md group cursor-pointer">
+                  <div className="img w-12.5! h-12.5! overflow-hidden rounded-md group cursor-pointer">
                     <img
                       src="https://images.pexels.com/photos/9939536/pexels-photo-9939536.jpeg"
                       alt=""
-                      className="w-full transition-all group-hover:scale-105"
+                      className="w-full h-full object-cover! transition-all group-hover:scale-105"
                     />
                   </div>
                   <div className="info">
@@ -187,11 +186,11 @@ const Checkout = () => {
               </div>
               <div className="flex items-center justify-between py-2!">
                 <div className="part1 flex items-center gap-3">
-                  <div className="img w-12.5! h-12.5! object-cover overflow-hidden rounded-md group cursor-pointer">
+                  <div className="img w-12.5! h-12.5! overflow-hidden rounded-md group cursor-pointer">
                     <img
                       src="https://images.pexels.com/photos/9939536/pexels-photo-9939536.jpeg"
                       alt=""
-                      className="w-full transition-all group-hover:scale-105"
+                      className="w-full h-full object-cover! transition-all group-hover:scale-105"
                     />
                   </div>
                   <div className="info">
@@ -203,11 +202,11 @@ const Checkout = () => {
               </div>
               <div className="flex items-center justify-between py-2!">
                 <div className="part1 flex items-center gap-3">
-                  <div className="img w-12.5! h-12.5! object-cover overflow-hidden rounded-md group cursor-pointer">
+                  <div className="img w-12.5! h-12.5! overflow-hidden rounded-md group cursor-pointer">
                     <img
                       src="https://images.pexels.com/photos/9939536/pexels-photo-9939536.jpeg"
                       alt=""
-                      className="w-full transition-all group-hover:scale-105"
+                      className="w-full h-full object-cover! transition-all group-hover:scale-105"
                     />
                   </div>
                   <div className="info">

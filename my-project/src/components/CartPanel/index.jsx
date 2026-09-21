@@ -11,11 +11,11 @@ const CartPanel = () => {
       <div className="scroll! w-full! max-h-75! overflow-y-scroll! overflow-x-hidden! py-3! px-4!">
         <div className="cartItem w-full flex items-center gap-4! border-b! border-[rgba(0,0,0,0.1)]! pb-4!">
           <div className="img w-[25%] overflow-hidden h-20! rounded-md">
-            <Link to="/product/45875" className="block group">
+            <Link to="/product/45875" className="block group h-full">
               <img
                 src="https://images.pexels.com/photos/9939536/pexels-photo-9939536.jpeg"
                 alt=""
-                className="w-full! group-hover:scale-105"
+                className="w-full! h-full! object-cover! group-hover:scale-105"
               />
             </Link>
           </div>
@@ -42,11 +42,11 @@ const CartPanel = () => {
 
         <div className="cartItem w-full flex items-center gap-4! border-b! border-[rgba(0,0,0,0.1)]! pb-4!">
           <div className="img w-[25%] overflow-hidden h-20! rounded-md">
-            <Link to="/product/45875" className="block group">
+            <Link to="/product/45875" className="block group h-full">
               <img
                 src="https://images.pexels.com/photos/9939536/pexels-photo-9939536.jpeg"
                 alt=""
-                className="w-full! group-hover:scale-105"
+                className="w-full! h-full! object-cover! group-hover:scale-105"
               />
             </Link>
           </div>
@@ -72,11 +72,11 @@ const CartPanel = () => {
         </div>
         <div className="cartItem w-full flex items-center gap-4! border-b! border-[rgba(0,0,0,0.1)]! pb-4!">
           <div className="img w-[25%] overflow-hidden h-20! rounded-md">
-            <Link to="/product/45875" className="block group">
+            <Link to="/product/45875" className="block group h-full">
               <img
                 src="https://images.pexels.com/photos/9939536/pexels-photo-9939536.jpeg"
                 alt=""
-                className="w-full! group-hover:scale-105"
+                className="w-full! h-full! object-cover! group-hover:scale-105"
               />
             </Link>
           </div>
@@ -101,41 +101,11 @@ const CartPanel = () => {
         </div>
         <div className="cartItem w-full flex items-center gap-4! border-b! border-[rgba(0,0,0,0.1)]! pb-4!">
           <div className="img w-[25%] overflow-hidden h-20! rounded-md">
-            <Link to="/product/45875" className="block group">
+            <Link to="/product/45875" className="block group h-full">
               <img
                 src="https://images.pexels.com/photos/9939536/pexels-photo-9939536.jpeg"
                 alt=""
-                className="w-full! group-hover:scale-105"
-              />
-            </Link>
-          </div>
-          <div className="info w-[75%]! pr-5! relative">
-            <h4 className="text-[14px]! font-medium!">
-              <Link to="/product/45875" className="link transition-all">
-                {" "}
-                Men's Streetwear Black Jean Jacket and Black Pants Combo{" "}
-              </Link>
-            </h4>
-
-            <p className="flex items-center gap-5! mt-2! mb-2!">
-              <span>
-                Qty: <span>2</span>
-              </span>
-              <span className="text-primary! font-bold">
-                Price: <span>$120</span>
-              </span>
-            </p>
-
-            <MdOutlineDeleteOutline className="absolute! top-0! right-0! cursor-pointer! text-[20px] link transition-all!" />
-          </div>
-        </div>
-        <div className="cartItem w-full flex items-center gap-4! border-b! border-[rgba(0,0,0,0.1)]! pb-4!">
-          <div className="img w-[25%] overflow-hidden h-20! rounded-md">
-            <Link to="/product/45875" className="block group">
-              <img
-                src="https://images.pexels.com/photos/9939536/pexels-photo-9939536.jpeg"
-                alt=""
-                className="w-full! group-hover:scale-105"
+                className="w-full! h-full! object-cover! group-hover:scale-105"
               />
             </Link>
           </div>
@@ -161,11 +131,41 @@ const CartPanel = () => {
         </div>
         <div className="cartItem w-full flex items-center gap-4! border-b! border-[rgba(0,0,0,0.1)]! pb-4!">
           <div className="img w-[25%] overflow-hidden h-20! rounded-md">
-            <Link to="/product/45875" className="block group">
+            <Link to="/product/45875" className="block group h-full">
               <img
                 src="https://images.pexels.com/photos/9939536/pexels-photo-9939536.jpeg"
                 alt=""
-                className="w-full! group-hover:scale-105"
+                className="w-full! h-full! object-cover! group-hover:scale-105"
+              />
+            </Link>
+          </div>
+          <div className="info w-[75%]! pr-5! relative">
+            <h4 className="text-[14px]! font-medium!">
+              <Link to="/product/45875" className="link transition-all">
+                {" "}
+                Men's Streetwear Black Jean Jacket and Black Pants Combo{" "}
+              </Link>
+            </h4>
+
+            <p className="flex items-center gap-5! mt-2! mb-2!">
+              <span>
+                Qty: <span>2</span>
+              </span>
+              <span className="text-primary! font-bold">
+                Price: <span>$120</span>
+              </span>
+            </p>
+
+            <MdOutlineDeleteOutline className="absolute! top-0! right-0! cursor-pointer! text-[20px] link transition-all!" />
+          </div>
+        </div>
+        <div className="cartItem w-full flex items-center gap-4! border-b! border-[rgba(0,0,0,0.1)]! pb-4!">
+          <div className="img w-[25%] overflow-hidden h-20! rounded-md">
+            <Link to="/product/45875" className="block group h-full">
+              <img
+                src="https://images.pexels.com/photos/9939536/pexels-photo-9939536.jpeg"
+                alt=""
+                className="w-full! h-full! object-cover! group-hover:scale-105"
               />
             </Link>
           </div>

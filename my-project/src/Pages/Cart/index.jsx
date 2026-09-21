@@ -5,8 +5,8 @@ import CartItems from "./cartItems";
 const CartPage = () => {
   return (
     <section className="section py-10! pb-10!">
-      <div className="container w-[80%] max-w-[80%] flex gap-5!">
-        <div className="leftPart w-[70%]">
+      <div className="container w-full md:w-[80%] max-w-full md:max-w-[80%] flex flex-col md:flex-row gap-5!">
+        <div className="leftPart w-full md:w-[70%]">
           <div className="shadow-md rounded-md p-5! bg-white">
             <div className="py-2! px-3! border-b border-[rgba(0,0,0,0.1)]">
               <h2>Your Cart</h2>
@@ -27,7 +27,7 @@ const CartPage = () => {
           </div>
         </div>
 
-        <div className="rightPart w-[30%]">
+        <div className="rightPart w-full md:w-[30%]">
           <div className="shadow-md rounded-md p-5! bg-white">
             <h3 className="pb-3!">Cart Totals</h3>
             <hr />

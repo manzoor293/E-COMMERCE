@@ -1,6 +1,5 @@
 import InnerImageZoomComponent from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/styles.min.css";
-import Rating from "@mui/material/Rating";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -25,16 +24,19 @@ const ProductZoom = () => {
   };
   return (
     <>
-      <div className="flex gap-3!">
-        <div className="w-[15%]">
+      <div className="flex flex-col md:flex-row gap-3!">
+        <div className="order-2 md:order-1 w-full md:w-[15%]">
           <Swiper
             ref={zoomSliderSml}
-            direction="vertical"
+            direction="horizontal"
             slidesPerView={4}
-            spaceBetween={0}
+            spaceBetween={8}
             navigation={true}
             modules={[Navigation]}
-            className="homeCatSlider zoomProductSliderThumbs h-125 overflow-hidden"
+            breakpoints={{
+              768: { direction: "vertical", slidesPerView: 4, spaceBetween: 0 },
+            }}
+            className="homeCatSlider zoomProductSliderThumbs h-20 md:h-125 overflow-hidden"
           >
             <SwiperSlide>
               <div
@@ -117,8 +119,7 @@ const ProductZoom = () => {
             <SwiperSlide></SwiperSlide>
           </Swiper>
         </div>
-
-        <div className="zoomContainer w-[85%] h-125 overflow-hidden">
+        <div className="order-1 md:order-2 zoomContainer w-full md:w-[85%] h-75 md:h-125 overflow-hidden">
           <Swiper
             ref={zoomSliderBig}
             slidesPerView={1}

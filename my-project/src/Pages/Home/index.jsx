@@ -31,12 +31,12 @@ const Home = () => {
       <HomeSlider />
 
       <section className="py-6!">
-        <div className="container flex gap-5">
-          <div className="part1 w-[70%]">
+        <div className="container flex flex-col md:flex-row gap-5">
+          <div className="part1 w-full md:w-[70%]">
             <HomeBannerV2 />
           </div>
 
-          <div className="part2 w-[30%] flex justify-between flex-col gap-5">
+          <div className="part2 w-full md:w-[30%] flex justify-between flex-col gap-5">
             <BannerBoxV2
               info="left"
               img={
@@ -55,9 +55,10 @@ const Home = () => {
 
       <HomeCatSlider />
 
+      {/* Popular Products heading + tabs */}
       <section className="bg-white py-8">
         <div className="container">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between md:items-center gap-3">
             <div className="leftSec">
               <h2 className="text-[20px] font-[600]">Popuplar Products</h2>
               <p className="text-[14px] font-[500]">
@@ -65,13 +66,12 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="rightSec w-[60%]">
+            <div className="rightSec w-full md:w-[60%]">
               <Tabs
                 value={value}
                 onChange={handleChange}
                 variant="scrollable"
                 scrollButtons="auto"
-                aria-label="scrollable auto tabs example"
               >
                 <Tab label="Fashion" />
                 <Tab label="Electronics" />
@@ -91,20 +91,34 @@ const Home = () => {
 
       <section className="py-4! pt-2 bg-white">
         <div className="container">
-          <div className="freeShiping w-[80%]! m-auto! py-4! p-4! border-2 border-primary flex items-center justify-between rounded-md mb-8!">
+          {/* Free shipping banner */}
+          <div className="freeShiping w-full md:w-[80%]! m-auto! py-4! p-4! border-2 border-primary flex flex-col md:flex-row items-center justify-between gap-3 rounded-md mb-8! text-center md:text-left">
             <div className="col1 flex items-center gap-4">
               <TbTruckDelivery className="text-[50px]" />
               <span className="text-[20px] font-semibold uppercase">
                 Free Shipping
               </span>
             </div>
-
             <div className="col2">
               <p className="mb-0 font-medium">
                 Free Delivery Now on your First order and over $200
               </p>
             </div>
-
+            <p className="font-bold text-[25px]">Only $200*</p>
+          </div>
+          {/* Free shipping banner */}
+          <div className="freeShiping w-full md:w-[80%]! m-auto! py-4! p-4! border-2 border-primary flex flex-col md:flex-row items-center justify-between gap-3 rounded-md mb-8! text-center md:text-left">
+            <div className="col1 flex items-center gap-4">
+              <TbTruckDelivery className="text-[50px]" />
+              <span className="text-[20px] font-semibold uppercase">
+                Free Shipping
+              </span>
+            </div>
+            <div className="col2">
+              <p className="mb-0 font-medium">
+                Free Delivery Now on your First order and over $200
+              </p>
+            </div>
             <p className="font-bold text-[25px]">Only $200*</p>
           </div>
 
@@ -130,13 +144,19 @@ const Home = () => {
 
       <section className="py-5 pb-8 pt-0 bg-white blogSection">
         <div className="container">
-          <h2 className="text-[20px] font-[600] !mb-4">From The Blog</h2>
+          <h2 className="text-[20px] font-[600]! mb-4!">From The Blog</h2>
           <Swiper
-            slidesPerView={4}
-            spaceBetween={30}
+            slidesPerView={1}
+            spaceBetween={20}
             navigation={true}
             modules={[Navigation]}
             className="homeCatSlider"
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              576: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
           >
             <SwiperSlide>
               <BlogItem />

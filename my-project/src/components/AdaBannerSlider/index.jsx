@@ -14,6 +14,11 @@ const AdsBannerSlider = (props) => {
         spaceBetween={10}
         navigation={true}
         modules={[Navigation]}
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          576: { slidesPerView: 2 },
+          1024: { slidesPerView: props.items },
+        }}
         className="homeCatSlider"
       >
         <SwiperSlide>

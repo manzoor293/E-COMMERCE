@@ -24,11 +24,16 @@ const HomeCatSlider = () => {
     <div className="homeCatSlider py-8!  pt-4!">
       <div className="container">
         <Swiper
-          slidesPerView={8}
+          slidesPerView={3}
           spaceBetween={10}
           navigation={true}
           modules={[Navigation]}
-          className="mySwiper"
+          breakpoints={{
+            320: { slidesPerView: 3 },
+            576: { slidesPerView: 4 },
+            768: { slidesPerView: 6 },
+            1024: { slidesPerView: 8 },
+          }}
         >
           <SwiperSlide>
             <Link to="/">

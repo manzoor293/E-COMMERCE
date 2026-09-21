@@ -56,6 +56,7 @@ h6 {
 .container {
   width: 95%;
   margin: auto;
+  max-width: 1600px; /* caps growth on 2xl/large monitors, doesn't affect anything below this */
 }
 
 .btn-org {
@@ -327,6 +328,12 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .cartPanel .MuiPaper-root {
   width: 400px !important;
+}
+@media (max-width: 480px) {
+  .cartPanel .MuiPaper-root {
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
 }
 #size-menu .MuiButtonBase-root {
   font-size: 12px !important;

@@ -1,11 +1,22 @@
 import { Button } from "@mui/material";
 import DashboardBoxes from "../../Components/DashboardBoxes";
-
 import { FaPlus } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa";
 import { FaAngleUp } from "react-icons/fa";
 import { useState } from "react";
 import Badge from "../../Components/Badge";
+import { Link } from "react-router-dom";
+import { AiOutlineEdit } from "react-icons/ai";
+import { FaRegEye } from "react-icons/fa6";
+import { GoTrash } from "react-icons/go";
+
+import Checkbox from "@mui/material/Checkbox";
+import Tooltip from "@mui/material/Tooltip";
+
+import Progress from "../../Components/ProgressBar";
+import ProgressBar from "../../Components/ProgressBar";
+
+const label = { slotProps: { input: { "aria-label": "Checkbox demo" } } };
 
 const Dashboard = () => {
   const [isOpenOrderdProduct, setIsOpenOrderdProduct] = useState(null);
@@ -19,7 +30,7 @@ const Dashboard = () => {
   };
   return (
     <>
-      <div className="w-full py-2 px-5 bg-white rounded-md border border-[rgba(0,0,0,0.1)] flex items-center gap-8 mb-5! justify-between">
+      <div className="w-full py-2 px-5 bg-[#f1faff] rounded-md border border-[rgba(0,0,0,0.1)] flex items-center gap-8 mb-5! justify-between">
         <div className="info">
           <h1 className="text-[35px] font-bold leading-10 mb-3">
             Good Morning,
@@ -40,6 +51,723 @@ const Dashboard = () => {
         <img src="/shop_illustration.png" className="w-[250px] " />
       </div>
       <DashboardBoxes />
+
+      <div className="card my-4 overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
+        <div className="flex items-center justify-between px-5 py-5">
+          <h2 className="text-[18px] font-semibold">Products</h2>
+        </div>
+
+        <div className="custom-scrollbar relative! overflow-x-auto! mt-5! pb-5! bg-neutral-primary-soft! shadow-xs! rounded-base!">
+          <table className="w-full! text-sm! text-left! rtl:text-right! text-gray-500 dark:text-gray-400">
+            <thead className="text-xs! text-gray-700! uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" className="px-6! pr-0 py-3! w-[10px]">
+                  <div className="w-60px">
+                    <Checkbox {...label} size="small" />
+                  </div>
+                </th>
+                <th scope="col" className="px-0! py-3!  whitespace-nowrap">
+                  Product
+                </th>
+                <th scope="col" className="px-6! py-3!  whitespace-nowrap">
+                  Category
+                </th>
+                <th scope="col" className="px-6! py-3!  whitespace-nowrap">
+                  Sub Category
+                </th>
+
+                <th scope="col" className="px-6! py-3!  whitespace-nowrap">
+                  Price
+                </th>
+                <th scope="col" className="px-6! py-3!  whitespace-nowrap">
+                  Sales
+                </th>
+                <th scope="col" className="px-6! py-3!  whitespace-nowrap">
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
+                <td className="px-6! pr-0 py-2!">
+                  <div className="w-60px">
+                    <Checkbox {...label} size="small" />
+                  </div>
+                </td>
+                <td className="px-0! py-2!">
+                  <div className="flex items-center gap-4 w-[300px]">
+                    <div className="w-[65px] h-[65px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://shahijora.com/cdn/shop/articles/44_55353a0f-80b1-4fcf-a70d-903bd50368cd.png?v=1777462951"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                    <div className="info w-[70%]">
+                      <h3 className="font-medium text-[12px] leading-4 hover:text-[#3872fa]">
+                        <Link to="/product/45677">
+                          Best Unstitched Clothing Brands Pakistani for Women
+                        </Link>
+                      </h3>
+                      <span className="text-[12px]">Shahijora</span>
+                    </div>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">Electronics</td>
+                <td className="px-6! py-2!">Women</td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex  gap-1 flex-col">
+                    <span className="oldPrice line-through leading-3 text-[14px] text-gray-500 font-medium">
+                      $58.00
+                    </span>
+                    <span className="oldPrice text-[14px] text-[#3872fa] font-semibold">
+                      $48.00
+                    </span>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">
+                  <p className="text-[14px] w-[100px]">
+                    <span className="font-semibold">235</span> sale
+                  </p>
+                  <ProgressBar value={40} type="warning" />
+                </td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex items-center gap-2">
+                    <Tooltip describeChild title="Edit Product" placement="top">
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <AiOutlineEdit className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="View Product Details"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <FaRegEye className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="Remove Product"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <GoTrash className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
+                <td className="px-6! pr-0 py-2!">
+                  <div className="w-60px">
+                    <Checkbox {...label} size="small" />
+                  </div>
+                </td>
+                <td className="px-0! py-2!">
+                  <div className="flex items-center gap-4 w-[300px]">
+                    <div className="w-[65px] h-[65px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://shahijora.com/cdn/shop/articles/44_55353a0f-80b1-4fcf-a70d-903bd50368cd.png?v=1777462951"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                    <div className="info w-[70%]">
+                      <h3 className="font-medium text-[12px] leading-4 hover:text-[#3872fa]">
+                        <Link to="/product/45677">
+                          Best Unstitched Clothing Brands Pakistani for Women
+                        </Link>
+                      </h3>
+                      <span className="text-[12px]">Shahijora</span>
+                    </div>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">Electronics</td>
+                <td className="px-6! py-2!">Women</td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex  gap-1 flex-col">
+                    <span className="oldPrice line-through leading-3 text-[14px] text-gray-500 font-medium">
+                      $58.00
+                    </span>
+                    <span className="oldPrice text-[14px] text-[#3872fa] font-semibold">
+                      $48.00
+                    </span>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">
+                  <p className="text-[14px] w-[100px]">
+                    <span className="font-semibold">235</span> sale
+                  </p>
+                  <ProgressBar value={40} type="warning" />
+                </td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex items-center gap-2">
+                    <Tooltip describeChild title="Edit Product" placement="top">
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <AiOutlineEdit className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="View Product Details"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <FaRegEye className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="Remove Product"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <GoTrash className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+                  </div>
+                </td>
+              </tr>
+              <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
+                <td className="px-6! pr-0 py-2!">
+                  <div className="w-60px">
+                    <Checkbox {...label} size="small" />
+                  </div>
+                </td>
+                <td className="px-0! py-2!">
+                  <div className="flex items-center gap-4 w-[300px]">
+                    <div className="w-[65px] h-[65px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://shahijora.com/cdn/shop/articles/44_55353a0f-80b1-4fcf-a70d-903bd50368cd.png?v=1777462951"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                    <div className="info w-[70%]">
+                      <h3 className="font-medium text-[12px] leading-4 hover:text-[#3872fa]">
+                        <Link to="/product/45677">
+                          Best Unstitched Clothing Brands Pakistani for Women
+                        </Link>
+                      </h3>
+                      <span className="text-[12px]">Shahijora</span>
+                    </div>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">Electronics</td>
+                <td className="px-6! py-2!">Women</td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex  gap-1 flex-col">
+                    <span className="oldPrice line-through leading-3 text-[14px] text-gray-500 font-medium">
+                      $58.00
+                    </span>
+                    <span className="oldPrice text-[14px] text-[#3872fa] font-semibold">
+                      $48.00
+                    </span>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">
+                  <p className="text-[14px] w-[100px]">
+                    <span className="font-semibold">235</span> sale
+                  </p>
+                  <ProgressBar value={40} type="warning" />
+                </td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex items-center gap-2">
+                    <Tooltip describeChild title="Edit Product" placement="top">
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <AiOutlineEdit className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="View Product Details"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <FaRegEye className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="Remove Product"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <GoTrash className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+                  </div>
+                </td>
+              </tr>
+              <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
+                <td className="px-6! pr-0 py-2!">
+                  <div className="w-60px">
+                    <Checkbox {...label} size="small" />
+                  </div>
+                </td>
+                <td className="px-0! py-2!">
+                  <div className="flex items-center gap-4 w-[300px]">
+                    <div className="w-[65px] h-[65px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://shahijora.com/cdn/shop/articles/44_55353a0f-80b1-4fcf-a70d-903bd50368cd.png?v=1777462951"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                    <div className="info w-[70%]">
+                      <h3 className="font-medium text-[12px] leading-4 hover:text-[#3872fa]">
+                        <Link to="/product/45677">
+                          Best Unstitched Clothing Brands Pakistani for Women
+                        </Link>
+                      </h3>
+                      <span className="text-[12px]">Shahijora</span>
+                    </div>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">Electronics</td>
+                <td className="px-6! py-2!">Women</td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex  gap-1 flex-col">
+                    <span className="oldPrice line-through leading-3 text-[14px] text-gray-500 font-medium">
+                      $58.00
+                    </span>
+                    <span className="oldPrice text-[14px] text-[#3872fa] font-semibold">
+                      $48.00
+                    </span>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">
+                  <p className="text-[14px] w-[100px]">
+                    <span className="font-semibold">235</span> sale
+                  </p>
+                  <ProgressBar value={40} type="warning" />
+                </td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex items-center gap-2">
+                    <Tooltip describeChild title="Edit Product" placement="top">
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <AiOutlineEdit className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="View Product Details"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <FaRegEye className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="Remove Product"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <GoTrash className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+                  </div>
+                </td>
+              </tr>
+              <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
+                <td className="px-6! pr-0 py-2!">
+                  <div className="w-60px">
+                    <Checkbox {...label} size="small" />
+                  </div>
+                </td>
+                <td className="px-0! py-2!">
+                  <div className="flex items-center gap-4 w-[300px]">
+                    <div className="w-[65px] h-[65px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://shahijora.com/cdn/shop/articles/44_55353a0f-80b1-4fcf-a70d-903bd50368cd.png?v=1777462951"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                    <div className="info w-[70%]">
+                      <h3 className="font-medium text-[12px] leading-4 hover:text-[#3872fa]">
+                        <Link to="/product/45677">
+                          Best Unstitched Clothing Brands Pakistani for Women
+                        </Link>
+                      </h3>
+                      <span className="text-[12px]">Shahijora</span>
+                    </div>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">Electronics</td>
+                <td className="px-6! py-2!">Women</td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex  gap-1 flex-col">
+                    <span className="oldPrice line-through leading-3 text-[14px] text-gray-500 font-medium">
+                      $58.00
+                    </span>
+                    <span className="oldPrice text-[14px] text-[#3872fa] font-semibold">
+                      $48.00
+                    </span>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">
+                  <p className="text-[14px] w-[100px]">
+                    <span className="font-semibold">235</span> sale
+                  </p>
+                  <ProgressBar value={40} type="warning" />
+                </td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex items-center gap-2">
+                    <Tooltip describeChild title="Edit Product" placement="top">
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <AiOutlineEdit className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="View Product Details"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <FaRegEye className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="Remove Product"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <GoTrash className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+                  </div>
+                </td>
+              </tr>
+              <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
+                <td className="px-6! pr-0 py-2!">
+                  <div className="w-60px">
+                    <Checkbox {...label} size="small" />
+                  </div>
+                </td>
+                <td className="px-0! py-2!">
+                  <div className="flex items-center gap-4 w-[300px]">
+                    <div className="w-[65px] h-[65px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://shahijora.com/cdn/shop/articles/44_55353a0f-80b1-4fcf-a70d-903bd50368cd.png?v=1777462951"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                    <div className="info w-[70%]">
+                      <h3 className="font-medium text-[12px] leading-4 hover:text-[#3872fa]">
+                        <Link to="/product/45677">
+                          Best Unstitched Clothing Brands Pakistani for Women
+                        </Link>
+                      </h3>
+                      <span className="text-[12px]">Shahijora</span>
+                    </div>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">Electronics</td>
+                <td className="px-6! py-2!">Women</td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex  gap-1 flex-col">
+                    <span className="oldPrice line-through leading-3 text-[14px] text-gray-500 font-medium">
+                      $58.00
+                    </span>
+                    <span className="oldPrice text-[14px] text-[#3872fa] font-semibold">
+                      $48.00
+                    </span>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">
+                  <p className="text-[14px] w-[100px]">
+                    <span className="font-semibold">235</span> sale
+                  </p>
+                  <ProgressBar value={40} type="warning" />
+                </td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex items-center gap-2">
+                    <Tooltip describeChild title="Edit Product" placement="top">
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <AiOutlineEdit className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="View Product Details"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <FaRegEye className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="Remove Product"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <GoTrash className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+                  </div>
+                </td>
+              </tr>
+              <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
+                <td className="px-6! pr-0 py-2!">
+                  <div className="w-60px">
+                    <Checkbox {...label} size="small" />
+                  </div>
+                </td>
+                <td className="px-0! py-2!">
+                  <div className="flex items-center gap-4 w-[300px]">
+                    <div className="w-[65px] h-[65px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://shahijora.com/cdn/shop/articles/44_55353a0f-80b1-4fcf-a70d-903bd50368cd.png?v=1777462951"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                    <div className="info w-[70%]">
+                      <h3 className="font-medium text-[12px] leading-4 hover:text-[#3872fa]">
+                        <Link to="/product/45677">
+                          Best Unstitched Clothing Brands Pakistani for Women
+                        </Link>
+                      </h3>
+                      <span className="text-[12px]">Shahijora</span>
+                    </div>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">Electronics</td>
+                <td className="px-6! py-2!">Women</td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex  gap-1 flex-col">
+                    <span className="oldPrice line-through leading-3 text-[14px] text-gray-500 font-medium">
+                      $58.00
+                    </span>
+                    <span className="oldPrice text-[14px] text-[#3872fa] font-semibold">
+                      $48.00
+                    </span>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">
+                  <p className="text-[14px] w-[100px]">
+                    <span className="font-semibold">235</span> sale
+                  </p>
+                  <ProgressBar value={40} type="warning" />
+                </td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex items-center gap-2">
+                    <Tooltip describeChild title="Edit Product" placement="top">
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <AiOutlineEdit className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="View Product Details"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <FaRegEye className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="Remove Product"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <GoTrash className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+                  </div>
+                </td>
+              </tr>
+              <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
+                <td className="px-6! pr-0 py-2!">
+                  <div className="w-60px">
+                    <Checkbox {...label} size="small" />
+                  </div>
+                </td>
+                <td className="px-0! py-2!">
+                  <div className="flex items-center gap-4 w-[300px]">
+                    <div className="w-[65px] h-[65px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://shahijora.com/cdn/shop/articles/44_55353a0f-80b1-4fcf-a70d-903bd50368cd.png?v=1777462951"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                    <div className="info w-[70%]">
+                      <h3 className="font-medium text-[12px] leading-4 hover:text-[#3872fa]">
+                        <Link to="/product/45677">
+                          Best Unstitched Clothing Brands Pakistani for Women
+                        </Link>
+                      </h3>
+                      <span className="text-[12px]">Shahijora</span>
+                    </div>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">Electronics</td>
+                <td className="px-6! py-2!">Women</td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex  gap-1 flex-col">
+                    <span className="oldPrice line-through leading-3 text-[14px] text-gray-500 font-medium">
+                      $58.00
+                    </span>
+                    <span className="oldPrice text-[14px] text-[#3872fa] font-semibold">
+                      $48.00
+                    </span>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">
+                  <p className="text-[14px] w-[100px]">
+                    <span className="font-semibold">235</span> sale
+                  </p>
+                  <ProgressBar value={40} type="warning" />
+                </td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex items-center gap-2">
+                    <Tooltip describeChild title="Edit Product" placement="top">
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <AiOutlineEdit className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="View Product Details"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <FaRegEye className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="Remove Product"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <GoTrash className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+                  </div>
+                </td>
+              </tr>
+              <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
+                <td className="px-6! pr-0 py-2!">
+                  <div className="w-60px">
+                    <Checkbox {...label} size="small" />
+                  </div>
+                </td>
+                <td className="px-0! py-2!">
+                  <div className="flex items-center gap-4 w-[300px]">
+                    <div className="w-[65px] h-[65px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://shahijora.com/cdn/shop/articles/44_55353a0f-80b1-4fcf-a70d-903bd50368cd.png?v=1777462951"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                    <div className="info w-[70%]">
+                      <h3 className="font-medium text-[12px] leading-4 hover:text-[#3872fa]">
+                        <Link to="/product/45677">
+                          Best Unstitched Clothing Brands Pakistani for Women
+                        </Link>
+                      </h3>
+                      <span className="text-[12px]">Shahijora</span>
+                    </div>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">Electronics</td>
+                <td className="px-6! py-2!">Women</td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex  gap-1 flex-col">
+                    <span className="oldPrice line-through leading-3 text-[14px] text-gray-500 font-medium">
+                      $58.00
+                    </span>
+                    <span className="oldPrice text-[14px] text-[#3872fa] font-semibold">
+                      $48.00
+                    </span>
+                  </div>
+                </td>
+                <td className="px-6! py-2!">
+                  <p className="text-[14px] w-[100px]">
+                    <span className="font-semibold">235</span> sale
+                  </p>
+                  <ProgressBar value={40} type="warning" />
+                </td>
+
+                <td className="px-6! py-2!">
+                  <div className="flex items-center gap-2">
+                    <Tooltip describeChild title="Edit Product" placement="top">
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <AiOutlineEdit className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="View Product Details"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <FaRegEye className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+
+                    <Tooltip
+                      describeChild
+                      title="Remove Product"
+                      placement="top"
+                    >
+                      <Button className="w-[35px]! h-[35px]! min-w-[35px]! border! border-[rgba(0,0,0,0.2)]! rounded-full! hover:bg-[#f1f1f1]!">
+                        <GoTrash className="text-[rgba(0,0,0,0.7)] text-[20px]" />
+                      </Button>
+                    </Tooltip>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
       <div className="card my-4 overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
         <div className="flex items-center justify-between px-5 py-5">

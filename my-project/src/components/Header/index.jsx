@@ -41,58 +41,57 @@ const Header = () => {
   const context = useContext(myContext);
   return (
     <header className="bg-white">
-      <div className="top-strip py-2 border-t-[1px]border-b-[1px] border-gray-250 hidden sm:block">
-        <div className="container flex flex-wrap md:flex-nowrap items-center justify-between gap-3">
-          <div className="w-full sm:w-1/2">
-            <p className="text-center text-[11px] font-medium sm:text-left sm:text-[12px]">
-              Get up to 50% off new season styles, limited time only!
-            </p>
-          </div>
-
-          <div className="col2 flex items-center justify-end w-[50%]">
-            <ul className="flex items-center gap-3">
-              <li className="list-none">
-                <Link
-                  to="/help-center"
-                  className="text-[13px]font-[500] link transition"
-                >
-                  Help Center
-                </Link>
-              </li>
-
-              <li className="list-none">
-                <Link
-                  to="/order-tracking"
-                  className="text-[13px]font-[500] link transition"
-                >
-                  Order Tracking
-                </Link>
-              </li>
-            </ul>
+      {/* TOP STRIP — stacks on mobile instead of squeezing side by side */}
+      <div className="top-strip py-2 border-t-[1px]border-b-[1px] border-gray-250">
+        <div className="container">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-0 text-center sm:text-left">
+            <div className="col1 w-full sm:w-[50%]">
+              <p className="text-[11px] sm:text-[12px] font-[500]">
+                Get up to 50% off new season styles, limited time only!
+              </p>
+            </div>
+            <div className="col2 flex items-center justify-center sm:justify-end w-full sm:w-[50%]">
+              <ul className="flex items-center gap-3">
+                <li className="list-none">
+                  <Link
+                    to="/help-center"
+                    className="text-[12px] sm:text-[13px] font-[500] link transition"
+                  >
+                    Help Center
+                  </Link>
+                </li>
+                <li className="list-none">
+                  <Link
+                    to="/order-tracking"
+                    className="text-[12px] sm:text-[13px] font-[500] link transition"
+                  >
+                    Order Tracking
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
+      {/* MAIN HEADER — logo + icons on row 1, search drops to row 2 on mobile */}
       <div className="header py-4 border-b border-gray-250">
-        <div className="container flex items-center justify-between">
+        <div className="container flex flex-wrap md:flex-nowrap items-center justify-between gap-3">
           <div className="col1 w-1/2 md:w-[30%]">
-            {" "}
             <Link to={"/"}>
               <img
                 src="/logo.png"
                 alt="Logo"
-                style={{ width: "160px", height: "auto" }}
+                className="w-[120px] sm:w-[140px] md:w-[160px] h-auto"
               />
             </Link>
           </div>
-          <div className="col2 order-3 w-full md:order-none md:w-[40%]">
-            {" "}
+          <div className="col2 order-3 md:order-2 w-full md:w-[40%]">
             <Search />
           </div>
 
-          <div className="col3 w-1/2 md:w-[35%] flex items-center justify-end pl-7!">
-            {" "}
-            <ul className="flex items-center justify-end gap-3 w-full">
+          <div className="col3 order-2 md:order-3 w-1/2 md:w-[35%] flex items-center justify-end pl-3! md:pl-7!">
+            <ul className="flex items-center justify-end gap-1 sm:gap-3 w-full">
               {context.isLogin === false ? (
                 <li className="list-none">
                   <Link
@@ -239,6 +238,10 @@ const Header = () => {
               </li>
             </ul>
           </div>
+
+          {/* <div className="col2 order-3 md:order-2 w-full md:w-[40%]">
+            <Search />
+          </div> */}
         </div>
       </div>
 

@@ -45,12 +45,11 @@ const ProductDetails = () => {
       </div>
 
       <section className="bg-white py-5!">
-        <div className="container flex gap-8 items-center">
-          <div className="productZoomContainer w-[40%]">
+        <div className="container flex flex-col md:flex-row gap-8 md:items-center">
+          <div className="productZoomContainer w-full md:w-[40%]">
             <ProductZoom />
           </div>
-
-          <div className="productContent w-[60%] pr-10! pl-10!">
+          <div className="productContent w-full md:w-[60%] px-0! md:pr-10! md:pl-10!">
             <ProductDetailsComponent />
           </div>
         </div>
@@ -226,20 +225,21 @@ const ProductDetails = () => {
           )}
 
           {activeTab === 2 && (
-            <div className="shadow-md w-[80%] py-5! px-8! rounded-md">
+            <div className="shadow-md w-full md:w-[80%] py-5! px-4! md:px-8! rounded-md">
               <div className="w-full productReviewsContainer">
                 <h2 className="text-[18px]">Customer Questions & Answers</h2>
 
                 <div className="reviewScroll w-full max-h-75! overflow-y-scroll overflow-x-hidden mt-5! pr-5!">
-                  <div className="review pt-5! pb-5! border-b border-[rgba(0,0,0,0.1)] w-full flex items-center justify-between">
-                    <div className="info w-[60%] flex items-center gap-3">
-                      <div className="img w-20 h-20 rounded-full overflow-hidden">
+                  <div className="review pt-5! pb-5! border-b border-[rgba(0,0,0,0.1)] w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                    <div className="info w-full sm:w-[60%] flex items-center gap-3">
+                      <div className="img w-20 h-20 rounded-full overflow-hidden shrink-0">
                         <img
                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMCRjnT3Wmsz5JXfYyQlcR8-r4bAUbQZMCIPRgtUfnZw&s=10"
                           className="w-full"
                         />
                       </div>
-                      <div className="w-[80%]">
+                      <div className="flex-1">
+                        {/* w-[80%] */}
                         <h4 className="text-[16px]">Manzoor</h4>
                         <h5 className="text-[13px] mb-0!">2026-08-25</h5>
                         <p className="mb-0! mt-0!">
@@ -253,7 +253,7 @@ const ProductDetails = () => {
                     <Rating name="size-small" defaultValue={4} readOnly />
                   </div>
 
-                  <div className="review pt-5! pb-5! border-b border-[rgba(0,0,0,0.1)] w-full flex items-center justify-between">
+                  <div className="review pt-5! pb-5! border-b border-[rgba(0,0,0,0.1)] w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                     <div className="info w-[60%] flex items-center gap-3">
                       <div className="img w-20 h-20 rounded-full overflow-hidden">
                         <img
@@ -274,7 +274,7 @@ const ProductDetails = () => {
                     </div>
                     <Rating name="size-small" defaultValue={4} readOnly />
                   </div>
-                  <div className="review pt-5! pb-5! border-b border-[rgba(0,0,0,0.1)] w-full flex items-center justify-between">
+                  <div className="review pt-5! pb-5! border-b border-[rgba(0,0,0,0.1)] w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                     <div className="info w-[60%] flex items-center gap-3">
                       <div className="img w-20 h-20 rounded-full overflow-hidden">
                         <img
@@ -295,7 +295,7 @@ const ProductDetails = () => {
                     </div>
                     <Rating name="size-small" defaultValue={4} readOnly />
                   </div>
-                  <div className="review pt-5! pb-5! border-b border-[rgba(0,0,0,0.1)] w-full flex items-center justify-between">
+                  <div className="review pt-5! pb-5! border-b border-[rgba(0,0,0,0.1)] w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                     <div className="info w-[60%] flex items-center gap-3">
                       <div className="img w-20 h-20 rounded-full overflow-hidden">
                         <img
@@ -316,7 +316,7 @@ const ProductDetails = () => {
                     </div>
                     <Rating name="size-small" defaultValue={4} readOnly />
                   </div>
-                  <div className="review pt-5! pb-5! border-b border-[rgba(0,0,0,0.1)] w-full flex items-center justify-between">
+                  <div className="review pt-5! pb-5! border-b border-[rgba(0,0,0,0.1)] w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                     <div className="info w-[60%] flex items-center gap-3">
                       <div className="img w-20 h-20 rounded-full overflow-hidden">
                         <img

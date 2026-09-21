@@ -14,8 +14,8 @@ const ProductItem = () => {
   const context = useContext(myContext);
 
   return (
-    <div className="productItem shadow-lg rounded-md overflow-hidden border border-[rgba(0,0,0,0.1)] flex items-center">
-      <div className="group imgWrapper w-[25%]! rounded-md relative">
+    <div className="productItem shadow-lg rounded-md overflow-hidden border border-[rgba(0,0,0,0.1)] flex flex-col sm:flex-row items-center">
+      <div className="group imgWrapper w-full sm:w-[25%]! rounded-md relative">
         <Link to="/">
           <div className="img h-62.5! overflow-hidden relative">
             <img
@@ -52,7 +52,7 @@ const ProductItem = () => {
         </div>
       </div>
 
-      <div className="info p-3! py-5! px-8! w-[75%]">
+      <div className="info p-3! py-5! sm:px-8! w-full sm:w-[75%]">
         <h6 className="text-[15px]  font-normal!">
           <Link to="/" className="link tansition-all">
             Soylent Green
