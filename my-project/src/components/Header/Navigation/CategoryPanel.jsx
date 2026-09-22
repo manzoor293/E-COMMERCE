@@ -2,17 +2,13 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import { IoCloseSharp } from "react-icons/io5";
 
-
 import "./style.css";
 import CategoryCollapse from "../../CategoryCollapse";
 
 const CategoryPanel = (props) => {
-
   const toggleDrawer = (newOpen) => () => {
     props.setIsOpenCatPanel(newOpen);
   };
-
-
 
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" className="categoryPanel">
@@ -24,8 +20,7 @@ const CategoryPanel = (props) => {
         />
       </h3>
 
-     <CategoryCollapse />
-
+      <CategoryCollapse />
     </Box>
   );
   return (

@@ -18,6 +18,9 @@ import { FaRegUser } from "react-icons/fa";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { IoIosLogOut } from "react-icons/io";
+import { RiMenu3Line } from "react-icons/ri";
+
+import CategoryPanel from "./Navigation/CategoryPanel";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -31,31 +34,33 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const handleClick = (event) => setAnchorEl(event.currentTarget);
+  const handleClose = () => setAnchorEl(null);
+
+  // const [isOpenMobileNav, setIsOpenMobileNav] = useState(false);
+  // const [fashionOpen, setFashionOpen] = useState(false);
+
+  const [isOpenCatPanel, setIsOpenCatPanel] = useState(false);
 
   const context = useContext(myContext);
+
   return (
     <header className="bg-white">
-      {/* TOP STRIP — stacks on mobile instead of squeezing side by side */}
-      <div className="top-strip py-2 border-t-[1px]border-b-[1px] border-gray-250">
+      {/* TOP STRIP — compact single line, secondary links hidden below sm */}
+      <div className="top-strip py-1.5! sm:py-2 border-t-[1px]border-b-[1px] border-gray-250">
         <div className="container">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-0 text-center sm:text-left">
             <div className="col1 w-full sm:w-[50%]">
-              <p className="text-[11px] sm:text-[12px] font-[500]">
+              <p className="text-[10px] sm:text-[12px] font-[500] truncate">
                 Get up to 50% off new season styles, limited time only!
               </p>
             </div>
-            <div className="col2 flex items-center justify-center sm:justify-end w-full sm:w-[50%]">
+            <div className="col2 hidden sm:flex items-center justify-end w-full sm:w-[50%]">
               <ul className="flex items-center gap-3">
                 <li className="list-none">
                   <Link
                     to="/help-center"
-                    className="text-[12px] sm:text-[13px] font-[500] link transition"
+                    className="text-[13px] font-[500] link transition"
                   >
                     Help Center
                   </Link>
@@ -63,7 +68,7 @@ const Header = () => {
                 <li className="list-none">
                   <Link
                     to="/order-tracking"
-                    className="text-[12px] sm:text-[13px] font-[500] link transition"
+                    className="text-[13px] font-[500] link transition"
                   >
                     Order Tracking
                   </Link>
@@ -74,36 +79,49 @@ const Header = () => {
         </div>
       </div>
 
-      {/* MAIN HEADER — logo + icons on row 1, search drops to row 2 on mobile */}
-      <div className="header py-4 border-b border-gray-250">
-        <div className="container flex flex-wrap md:flex-nowrap items-center justify-between gap-3">
-          <div className="col1 w-1/2 md:w-[30%]">
+      {/* MAIN HEADER ROW — one compact row on mobile: [menu icon] [logo] [icon cluster] */}
+      <div className="header py-2.5! md:py-4 border-b border-gray-250">
+        <div className="container flex items-center justify-between gap-2 md:gap-3">
+          {/* was setIsOpenMobileNav(true) */}
+          <button
+            className="md:hidden flex items-center justify-center w-9 h-9 shrink-0 -ml-1"
+            onClick={() => setIsOpenCatPanel(true)}
+            aria-label="Open menu"
+          >
+            <RiMenu3Line className="text-[22px]" />
+          </button>
+
+          {/* LOGO — centered on mobile, left-aligned at md: */}
+          <div className="col1 flex-1 md:flex-none flex justify-center md:justify-start md:w-[30%]">
             <Link to={"/"}>
               <img
                 src="/logo.png"
                 alt="Logo"
-                className="w-[120px] sm:w-[140px] md:w-[160px] h-auto"
+                className="w-[100px] sm:w-[130px] md:w-[160px] h-auto"
               />
             </Link>
           </div>
-          <div className="col2 order-3 md:order-2 w-full md:w-[40%]">
+
+          {/* SEARCH — desktop only here; mobile version is its own row below */}
+          <div className="col2 hidden md:block md:w-[40%] md:order-2">
             <Search />
           </div>
 
-          <div className="col3 order-2 md:order-3 w-1/2 md:w-[35%] flex items-center justify-end pl-3! md:pl-7! min-w-0">
-            <ul className="flex items-center justify-end gap-1 sm:gap-3 w-full min-w-0">
+          {/* RIGHT: account + compare + wishlist + cart — always pinned to the true right edge */}
+          <div className="col3 md:order-3 md:w-[35%] flex items-center justify-end shrink-0 min-w-0 pl-2! md:pl-7!">
+            <ul className="flex items-center justify-end gap-0.5 sm:gap-1 md:gap-3 min-w-0">
               {context.isLogin === false ? (
                 <li className="list-none">
                   <Link
                     to="/login"
-                    className="link transition text-[15px] font-medium"
+                    className="link transition text-[13px] sm:text-[15px] font-medium"
                   >
                     Login
                   </Link>{" "}
                   | &nbsp;
                   <Link
                     to="/register"
-                    className="link transition text-[15px] font-medium"
+                    className="link transition text-[13px] sm:text-[15px] font-medium"
                   >
                     Register
                   </Link>
@@ -111,11 +129,11 @@ const Header = () => {
               ) : (
                 <>
                   <Button
-                    className="text-black myAccountWrap flex items-center gap-3 cursor-pointer !min-w-0"
+                    className="text-black myAccountWrap flex items-center gap-3 cursor-pointer !min-w-0 !p-1.5 sm:!p-2"
                     onClick={handleClick}
                   >
-                    <span className="w-[40px]! h-[40px]! min-w-[40px]! flex items-center justify-center rounded-full! bg-#f1f1f1!">
-                      <FaRegUser className="text-[16px]! text-[rgba(0,0,0,0.7)]!" />
+                    <span className="w-[36px]! h-[36px]! sm:w-[40px]! sm:h-[40px]! min-w-[36px]! flex items-center justify-center rounded-full! bg-#f1f1f1!">
+                      <FaRegUser className="text-[15px]! sm:text-[16px]! text-[rgba(0,0,0,0.7)]!" />
                     </span>
 
                     <div className="info hidden md:flex flex-col min-w-0">
@@ -174,7 +192,6 @@ const Header = () => {
                         <span className="text-[14px]">My account</span>
                       </MenuItem>
                     </Link>
-
                     <Link to="/my-orders" className="w-full block">
                       <MenuItem
                         onClick={handleClose}
@@ -206,7 +223,7 @@ const Header = () => {
 
               <li>
                 <Tooltip title="Compare">
-                  <IconButton aria-label="cart">
+                  <IconButton aria-label="compare" className="p-1.5! sm:p-2!">
                     <StyledBadge badgeContent={4} color="secondary">
                       <IoGitCompareOutline />
                     </StyledBadge>
@@ -216,7 +233,7 @@ const Header = () => {
 
               <li>
                 <Tooltip title="Wishlist">
-                  <IconButton aria-label="cart">
+                  <IconButton aria-label="wishlist" className="p-1.5! sm:p-2!">
                     <StyledBadge badgeContent={4} color="secondary">
                       <FaRegHeart />
                     </StyledBadge>
@@ -228,6 +245,7 @@ const Header = () => {
                 <Tooltip title="Cart">
                   <IconButton
                     aria-label="cart"
+                    className="p-1.5! sm:p-2!"
                     onClick={() => context.setOpenCartPanel(true)}
                   >
                     <StyledBadge badgeContent={4} color="secondary">
@@ -238,14 +256,20 @@ const Header = () => {
               </li>
             </ul>
           </div>
+        </div>
 
-          {/* <div className="col2 order-3 md:order-2 w-full md:w-[40%]">
-            <Search />
-          </div> */}
+        {/* SEARCH — mobile-only, full width, sits right under the main row */}
+        <div className="container mt-3! md:hidden">
+          <Search />
         </div>
       </div>
 
-      <Navigation />
+      <Navigation setIsOpenCatPanel={setIsOpenCatPanel} />
+
+      <CategoryPanel
+        isOpenCatPanel={isOpenCatPanel}
+        setIsOpenCatPanel={setIsOpenCatPanel}
+      />
     </header>
   );
 };
