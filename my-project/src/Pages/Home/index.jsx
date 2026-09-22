@@ -106,21 +106,6 @@ const Home = () => {
             </div>
             <p className="font-bold text-[25px]">Only $200*</p>
           </div>
-          {/* Free shipping banner */}
-          <div className="freeShiping w-full md:w-[80%]! m-auto! py-4! p-4! border-2 border-primary flex flex-col md:flex-row items-center justify-between gap-3 rounded-md mb-8! text-center md:text-left">
-            <div className="col1 flex items-center gap-4">
-              <TbTruckDelivery className="text-[50px]" />
-              <span className="text-[20px] font-semibold uppercase">
-                Free Shipping
-              </span>
-            </div>
-            <div className="col2">
-              <p className="mb-0 font-medium">
-                Free Delivery Now on your First order and over $200
-              </p>
-            </div>
-            <p className="font-bold text-[25px]">Only $200*</p>
-          </div>
 
           <AdaBannerSliderV2 items={4} />
         </div>

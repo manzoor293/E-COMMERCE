@@ -105,9 +105,13 @@ nav ul button:hover {
   background: none !important;
 }
 .sliderHome {
-  overflow: inherit !important;
+  overflow: hidden !important;
 }
-
+@media (max-width: 480px) {
+  .sliderHome .item {
+    height: 220px; /* was 180px — a bit more breathing room for the text stack */
+  }
+}
 .sliderHome {
   --swiper-navigation-color: #000;
 }
@@ -326,15 +330,7 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 0px !important;
   overflow-y: hidden !important;
 }
-.cartPanel .MuiPaper-root {
-  width: 400px !important;
-}
-@media (max-width: 480px) {
-  .cartPanel .MuiPaper-root {
-    width: 100vw !important;
-    max-width: 100vw !important;
-  }
-}
+
 #size-menu .MuiButtonBase-root {
   font-size: 12px !important;
 }

@@ -90,8 +90,8 @@ const Header = () => {
             <Search />
           </div>
 
-          <div className="col3 order-2 md:order-3 w-1/2 md:w-[35%] flex items-center justify-end pl-3! md:pl-7!">
-            <ul className="flex items-center justify-end gap-1 sm:gap-3 w-full">
+          <div className="col3 order-2 md:order-3 w-1/2 md:w-[35%] flex items-center justify-end pl-3! md:pl-7! min-w-0">
+            <ul className="flex items-center justify-end gap-1 sm:gap-3 w-full min-w-0">
               {context.isLogin === false ? (
                 <li className="list-none">
                   <Link
@@ -111,18 +111,18 @@ const Header = () => {
               ) : (
                 <>
                   <Button
-                    className="text-black myAccountWrap flex items-center gap-3 cursor-pointer"
+                    className="text-black myAccountWrap flex items-center gap-3 cursor-pointer !min-w-0"
                     onClick={handleClick}
                   >
                     <span className="w-[40px]! h-[40px]! min-w-[40px]! flex items-center justify-center rounded-full! bg-#f1f1f1!">
                       <FaRegUser className="text-[16px]! text-[rgba(0,0,0,0.7)]!" />
                     </span>
 
-                    <div className="info flex flex-col">
-                      <h4 className="leading-3 text-[14px] text-[rgba(0,0,0,0.7)] font-medium mb-0! capitalize text-left justify-start">
+                    <div className="info hidden md:flex flex-col min-w-0">
+                      <h4 className="leading-3 text-[14px] text-[rgba(0,0,0,0.7)] font-medium mb-0! capitalize text-left justify-start truncate">
                         Manzoor Ahmad
                       </h4>
-                      <span className="text-[13px] text-[rgba(0,0,0,0.7)] font-[400] mb-0! capitalize text-left justify-start">
+                      <span className="text-[13px] text-[rgba(0,0,0,0.7)] font-[400] mb-0! capitalize text-left justify-start truncate">
                         manzoorahmadm293@gmail.com
                       </span>
                     </div>
