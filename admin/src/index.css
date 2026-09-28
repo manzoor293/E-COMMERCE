@@ -4,14 +4,7 @@
 
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
-/* @theme: {
-  extend: {
-    colors: {
-      primary: "#3872fa";
-    }
-    ,
-    backgroundColor: {
-      primary: "#3872fa";
-    }
-  }
-} */
+
+th.MuiTableCell-root {
+  @apply bg-[#f1f1f1] py-1;
+}

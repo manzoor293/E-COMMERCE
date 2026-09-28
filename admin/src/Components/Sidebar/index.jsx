@@ -9,9 +9,11 @@ import { IoBagCheckOutline } from "react-icons/io5";
 import { IoMdLogOut } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa";
 import { Collapse } from "react-collapse";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { MyContext } from "../../App";
 
 const Sidebar = () => {
+  const context = useContext(MyContext);
   const [submenuIndex, setSubmenuIndex] = useState(null);
 
   const isOpenSubMenu = (index) => {
@@ -22,7 +24,9 @@ const Sidebar = () => {
     }
   };
   return (
-    <div className="sidebar bg-[#ffff] fixed w-[18%] top-0 left-0 h-full bg-[#f1f1f1] border-r border-[rgba(0,0,0,0.1)] py-2 px-4">
+    <div
+      className={`sidebar bg-[#ffff] fixed top-0 left-0 h-full bg-[#f1f1f1] border-r border-[rgba(0,0,0,0.1)] py-2 px-4 ${context.isSidebarOpen === true ? "w-[18%]" : "w-[0px]"}`}
+    >
       <div className="py-1 w-full">
         <Link to="/">
           <img src="gemini-svg.svg" alt="" className="w-50 h-11 " />

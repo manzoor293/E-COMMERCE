@@ -9,9 +9,12 @@ import Divider from "@mui/material/Divider";
 import { FaRegUser } from "react-icons/fa";
 import { IoMdLogOut } from "react-icons/io";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { MyContext } from "../../App";
 
 const Header = () => {
+  const context = useContext(MyContext);
+
   const [anchorMyAcc, setAnchorMyAcc] = useState(null);
   const openMyAcc = Boolean(anchorMyAcc);
   const handleClickMyAcc = (event) => {
@@ -21,9 +24,14 @@ const Header = () => {
     setAnchorMyAcc(null);
   };
   return (
-    <header className="w-full! h-auto py-2 pl-72 pr-7 bg-white shadow-md flex items-center justify-between">
+    <header
+      className={`w-full! h-auto py-2  pr-7 bg-white shadow-md flex items-center justify-between ${context.isSidebarOpen === true ? "pl-72" : "pl-5"}`}
+    >
       <div className="part1">
-        <Button className="w-10! h-10! min-w-10! rounded-full! text-gray-800! hover:bg-gray-200!">
+        <Button
+          className="w-10! h-10! min-w-10! rounded-full! text-gray-800! hover:bg-gray-200!"
+          onClick={() => context.setisSidebarOpen(!context.isSidebarOpen)}
+        >
           <RiMenu2Line className="text-[18px] text-gray-800" />
         </Button>
       </div>
