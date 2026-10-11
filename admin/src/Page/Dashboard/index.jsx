@@ -39,21 +39,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-// const data = [
-//   { label: "Jan", x: 400, y: 240 },
-//   { label: "Feb", x: 300, y: 139 },
-//   { label: "Mar", x: 500, y: 380 },
-//   { label: "Apr", x: 450, y: 390 },
-//   { label: "May", x: 600, y: 480 },
-//   { label: "Jun", x: 550, y: 320 },
-//   { label: "Jul", x: 650, y: 410 },
-//   { label: "Aug", x: 700, y: 460 },
-//   { label: "Sep", x: 620, y: 390 },
-//   { label: "Oct", x: 580, y: 340 },
-//   { label: "Nov", x: 680, y: 430 },
-//   { label: "Dec", x: 750, y: 520 },
-// ];
-
 const columns = [
   { id: "product", label: "PRODUCT", minWidth: 150 },
   { id: "category", label: "CATEGORY", minWidth: 100 },

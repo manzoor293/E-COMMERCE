@@ -27,9 +27,9 @@ const Sidebar = () => {
     <div
       className={`sidebar bg-[#ffff] fixed top-0 left-0 h-full bg-[#f1f1f1] border-r border-[rgba(0,0,0,0.1)] py-2 px-4 ${context.isSidebarOpen === true ? "w-[18%]" : "w-[0px]"}`}
     >
-      <div className="py-1 w-full">
+      <div className="py-0 w-full">
         <Link to="/">
-          <img src="gemini-svg.svg" alt="" className="w-50 h-11 " />
+          <img src="gemini-svg.svg" alt="logo" />
         </Link>
       </div>
 

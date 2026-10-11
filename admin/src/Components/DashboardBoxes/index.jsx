@@ -21,46 +21,46 @@ const DashboardBoxes = () => {
         className="dashaordBoxesSlider"
       >
         <SwiperSlide>
-          <div className="box p-5 bg-white cursor-pointer hover:bg-[#f1faff] rounded-md border border-[rgba(0,0,0,0.1)] flex items-center gap-4">
-            <AiTwotoneGift className="text-[40px] text-[#3872fa]" />
+          <div className="box p-5 bg-[#3872fa] cursor-pointer hover:bg-[#8d9397] rounded-md border border-[rgba(0,0,0,0.1)] flex items-center gap-4">
+            <AiTwotoneGift className="text-[40px] text-white" />
             <div className="info w-[70%]">
               <h3>New Orders</h3>
               <b>1,390</b>
             </div>
-            <IoStatsChartSharp className="text-[50px] text-[#3872fa]" />
+            <IoStatsChartSharp className="text-[50px] text-white" />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="box p-5 bg-white cursor-pointer hover:bg-[#f1faff] rounded-md border border-[rgba(0,0,0,0.1)] flex items-center gap-4">
-            <AiTwotonePieChart className="text-[40px] text-[#10b981]" />
+          <div className="box p-5 bg-[#10b981] cursor-pointer hover:bg-[#8d9397] rounded-md border border-[rgba(0,0,0,0.1)] flex items-center gap-4">
+            <AiTwotonePieChart className="text-[40px] text-white" />
             <div className="info w-[70%]">
               <h3>Sales</h3>
               <b>$57,890</b>
             </div>
-            <IoStatsChartSharp className="text-[50px] text-[#10b981]" />
+            <IoStatsChartSharp className="text-[50px] text-white" />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="box p-5 bg-white cursor-pointer hover:bg-[#f1faff] rounded-md border border-[rgba(0,0,0,0.1)] flex items-center gap-4">
-            <BsBank className="text-[40px] text-[#7928ca]" />
+          <div className="box p-5 bg-[#7928ca] cursor-pointer hover:bg-[#8d9397] rounded-md border border-[rgba(0,0,0,0.1)] flex items-center gap-4">
+            <BsBank className="text-[40px] text-white" />
             <div className="info w-[70%]">
               <h3>Revenue</h3>
               <b>$12,390</b>
             </div>
-            <IoStatsChartSharp className="text-[50px] text-[#7928ca]" />
+            <IoStatsChartSharp className="text-[50px] text-white" />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="box p-5 bg-white cursor-pointer hover:bg-[#f1faff] rounded-md border border-[rgba(0,0,0,0.1)] flex items-center gap-4">
-            <RiProductHuntLine className="text-[40px] text-[#312be1d8]" />
+          <div className="box p-5 bg-[#312be1d8] cursor-pointer hover:bg-[#8d9397] rounded-md border border-[rgba(0,0,0,0.1)] flex items-center gap-4">
+            <RiProductHuntLine className="text-[40px] text-white" />
             <div className="info w-[70%]">
               <h3>Total Products</h3>
               <b>$15,390</b>
             </div>
-            <IoStatsChartSharp className="text-[50px] text-[#312be1d8]" />
+            <IoStatsChartSharp className="text-[50px] text-white" />
           </div>
         </SwiperSlide>
       </Swiper>

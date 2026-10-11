@@ -3,11 +3,14 @@ import Dashboard from "./Page/Dashboard";
 import Header from "./Components/Header";
 import Sidebar from "./Components/Sidebar";
 import { createContext, useState } from "react";
+import Login from "./Page/Login";
+import SignUp from "./Page/SignUp";
 
 const MyContext = createContext();
 
 function App() {
   const [isSidebarOpen, setisSidebarOpen] = useState(true);
+  const [isLogin, setisLogin] = useState(false);
 
   const router = createBrowserRouter([
     {
@@ -34,11 +37,31 @@ function App() {
         </>
       ),
     },
+    {
+      path: "/login",
+      exact: true,
+      element: (
+        <>
+          <Login />
+        </>
+      ),
+    },
+    {
+      path: "/sign-up",
+      exact: true,
+      element: (
+        <>
+          <SignUp />
+        </>
+      ),
+    },
   ]);
 
   const values = {
     isSidebarOpen,
     setisSidebarOpen,
+    isLogin,
+    setisLogin,
   };
   return (
     <>
