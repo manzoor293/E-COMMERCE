@@ -109,12 +109,18 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className="w-full">
-                <Link to="/product/upload">
-                  <Button className="w-full! text-[rgba(0,0,0,0.7)]! capitalize! justify-start! text-[13px]! font-bold! pl-9! flex! gap-3!">
-                    <span className="block! w-1.25! h-1.25! rounded-full! bg-[rgba(0,0,0,0.2)]!"></span>
-                    Product Upload
-                  </Button>
-                </Link>
+                <Button
+                  className="w-full! text-[rgba(0,0,0,0.7)]! capitalize! justify-start! text-[13px]! font-bold! pl-9! flex! gap-3!"
+                  onClick={() =>
+                    context.setIsOpneFullScreenPanel({
+                      open: true,
+                      model: "Add Product",
+                    })
+                  }
+                >
+                  <span className="block! w-1.25! h-1.25! rounded-full! bg-[rgba(0,0,0,0.2)]!"></span>
+                  Product Upload
+                </Button>
               </li>
             </ul>
           </Collapse>

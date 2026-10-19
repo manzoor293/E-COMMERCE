@@ -29,20 +29,14 @@ const SignUp = () => {
         </Link>
         <div className="flex items-center gap-4">
           <NavLink to="/login" exact={true} activeClassName="isActive">
-            <Button
-              className="rounded-full! text-[rgba(0,0,0,0.8)]! px-5! flex gap-1"
-              onClick={() => console.log("Login clicked")}
-            >
+            <Button className="rounded-full! text-[rgba(0,0,0,0.8)]! px-5! flex gap-1">
               <CgLogIn className="text-[15px]" />
               Login
             </Button>
           </NavLink>
 
           <NavLink to="/sign-up" exact={true} activeClassName="isActive">
-            <Button
-              className=" rounded-full! text-[rgba(0,0,0,0.8)]! px-5! flex gap-1"
-              onClick={() => console.log("Sign Up clicked")}
-            >
+            <Button className=" rounded-full! text-[rgba(0,0,0,0.8)]! px-5! flex gap-1">
               <FaRegUser className="text-[15px]" />
               Sign Up
             </Button>

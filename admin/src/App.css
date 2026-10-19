@@ -1,6 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
-  background: white;
+  background: #f0f0f0;
 }
 .MuiBadge-badge {
   background: #ff5252 !important;
@@ -41,4 +41,26 @@ a.active button {
 }
 .MuiButton-icon svg {
   font-size: 27px !important;
+}
+.MuiAppBar-colorPrimary {
+  background: #e6e6e6 !important;
+}
+/*
+Source - https://stackoverflow.com/a/4298216
+Posted by antonj, modified by community. See post 'Timeline' for change history
+Retrieved 2026-10-16, License - CC BY-SA 4.0
+*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+.MuiSelect-select {
+  background: #fff !important;
 }

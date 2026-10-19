@@ -5,7 +5,7 @@ import Badge from "../../Components/Badge";
 import { FaPlus } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa";
 import { FaAngleUp } from "react-icons/fa";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineEdit } from "react-icons/ai";
 import { FaRegEye } from "react-icons/fa6";
@@ -38,6 +38,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { MyContext } from "../../App";
 
 const columns = [
   { id: "product", label: "PRODUCT", minWidth: 150 },
@@ -69,6 +70,9 @@ const label = { slotProps: { input: { "aria-label": "Checkbox demo" } } };
 
 const Dashboard = () => {
   const [isOpenOrderdProduct, setIsOpenOrderdProduct] = useState(null);
+
+  const context = useContext(MyContext);
+
   const [chart1Data] = useState([
     { label: "Jan", x: 400, y: 240 },
     { label: "Feb", x: 300, y: 139 },
@@ -124,7 +128,15 @@ const Dashboard = () => {
           </p>
 
           <br />
-          <Button className="btn-blue">
+          <Button
+            className="btn-blue flex gap-1"
+            onClick={() =>
+              context.setIsOpneFullScreenPanel({
+                open: true,
+                model: "Add Product",
+              })
+            }
+          >
             <FaPlus />
             Add Product
           </Button>
@@ -169,7 +181,15 @@ const Dashboard = () => {
             <Button className="bg-green-600! font-bold! text-white! btn-sm!">
               Export
             </Button>
-            <Button className="btn-blue font-bold! text-white! btn-sm">
+            <Button
+              className="btn-blue font-bold! text-white! btn-sm"
+              onClick={() =>
+                context.setIsOpneFullScreenPanel({
+                  open: true,
+                  model: "Add Product",
+                })
+              }
+            >
               Add Product
             </Button>
           </div>
@@ -734,7 +754,15 @@ const Dashboard = () => {
             <Button className="bg-green-600! text-white! font-bold! btn-sm!">
               Export
             </Button>
-            <Button className="btn-blue text-white! font-bold! btn-sm">
+            <Button
+              className="btn-blue text-white! font-bold! btn-sm"
+              onClick={() =>
+                context.setIsOpneFullScreenPanel({
+                  open: true,
+                  model: "Add Product",
+                })
+              }
+            >
               Add Product
             </Button>
           </div>

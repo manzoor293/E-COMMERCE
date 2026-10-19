@@ -27,6 +27,7 @@ const Login = () => {
         <Link to="/">
           <img src="gemini-svg.svg" alt="logo" className="w-50" />
         </Link>
+
         <div className="flex items-center gap-4">
           <NavLink to="/login" exact={true} activeClassName="isActive">
             <Button
