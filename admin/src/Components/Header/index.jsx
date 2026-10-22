@@ -11,6 +11,7 @@ import { IoMdLogOut } from "react-icons/io";
 
 import { useContext, useState } from "react";
 import { MyContext } from "../../App";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const context = useContext(MyContext);
@@ -130,7 +131,9 @@ const Header = () => {
             </Menu>
           </div>
         ) : (
-          <Button className="btn-blue btn-sm rounded-full!"> Sign In</Button>
+          <Link to="/login">
+            <Button className="btn-blue btn-sm rounded-full!"> Sign In</Button>
+          </Link>
         )}
       </div>
     </header>
