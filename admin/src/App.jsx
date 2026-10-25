@@ -11,10 +11,6 @@ import AddProduct from "./Page/Products/addProduct";
 // Add Products Panel from mu
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemButton from "@mui/material/ListItemButton";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -29,6 +25,9 @@ import { SubCategoryList } from "./Page/Category/subCatList";
 import AddSubCategory from "./Page/Category/addSubCategory";
 import { Users } from "./Page/Users";
 import { Orders } from "./Page/Orders";
+import ForgotPassword from "./Page/ForgotPassword";
+import VerifyAccount from "./Page/VerifyAccount";
+import ChangePassword from "./Page/ChangePassword";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -229,6 +228,33 @@ function App() {
               </div>
             </div>
           </section>
+        </>
+      ),
+    },
+    {
+      path: "/forgot-password",
+      exact: true,
+      element: (
+        <>
+          <ForgotPassword />
+        </>
+      ),
+    },
+    {
+      path: "/verify-account",
+      exact: true,
+      element: (
+        <>
+          <VerifyAccount />
+        </>
+      ),
+    },
+    {
+      path: "/change-password",
+      exact: true,
+      element: (
+        <>
+          <ChangePassword />
         </>
       ),
     },

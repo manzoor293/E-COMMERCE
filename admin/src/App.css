@@ -68,3 +68,6 @@ input[type="number"] {
 .MuiDialog-paper {
   background: #f9fafb !important;
 }
+.MuiTableBody-root > tr:nth-child(even) {
+  background-color: #f3f4f6;
+}

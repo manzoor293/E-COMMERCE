@@ -47,11 +47,11 @@ const Header = () => {
         {context.isLogin === true ? (
           <div className="relative">
             <div
-              className="w-8 h-8 rounded-full overflow-hidden cursor-pointer"
+              className="w-11 h-11 rounded-full overflow-hidden cursor-pointer"
               onClick={handleClickMyAcc}
             >
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5KqJtGTk_A8qyCHQ4sn9GSfGbi6uyYitAFLeSSpVsw&s=10"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz09LUJmAfUHMMNqn9iOyi0Q7GjW27Gn27tY6EahCyjg&s=10"
                 alt=""
                 className="w-full h-full object-cover"
               />
@@ -95,9 +95,9 @@ const Header = () => {
             >
               <MenuItem onClick={handleCloseMyAcc} className="bg-white!">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full overflow-hidden cursor-pointer">
+                  <div className="w-12 h-12 rounded-full overflow-hidden cursor-pointer">
                     <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5KqJtGTk_A8qyCHQ4sn9GSfGbi6uyYitAFLeSSpVsw&s=10"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz09LUJmAfUHMMNqn9iOyi0Q7GjW27Gn27tY6EahCyjg&s=10"
                       alt=""
                       className="w-full h-full object-cover"
                     />

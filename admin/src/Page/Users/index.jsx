@@ -14,9 +14,11 @@ import SearchBox from "../../Components/SearchBox";
 
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { MdLocalPhone } from "react-icons/md";
+import { SlCalender } from "react-icons/sl";
 
 const columns = [
   { id: "userImg", label: "USER IMAGE", minWidth: 80 },
+
   { id: "userName", label: "USER Name", minWidth: 100 },
 
   {
@@ -27,6 +29,11 @@ const columns = [
   {
     id: "userPh",
     label: "USER PHONE NO",
+    minWidth: 130,
+  },
+  {
+    id: "createdDate",
+    label: "CREATED",
     minWidth: 130,
   },
 ];
@@ -84,7 +91,7 @@ export const Users = () => {
                 </TableCell>
                 <TableCell style={{ minWidth: columns.minWidth }}>
                   <div className="flex items-center gap-4 w-[70px]">
-                    <div className="w-[65px] h-[65px] rounded-md overflow-hidden group">
+                    <div className="w-[45px] h-[45px] rounded-md overflow-hidden group">
                       <img
                         src="https://mui.com/static/images/avatar/1.jpg"
                         alt="women-dress"
@@ -106,6 +113,208 @@ export const Users = () => {
                   <span className="flex items-center gap-2">
                     <MdLocalPhone />
                     +923430510227
+                  </span>
+                </TableCell>
+
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <SlCalender />
+                    23-10-2026
+                  </span>
+                </TableCell>
+              </TableRow>
+
+              <TableRow>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <Checkbox {...label} size="small" />
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <div className="flex items-center gap-4 w-[70px]">
+                    <div className="w-[45px] h-[45px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                  </div>
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  Manzoor Ahmad
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdOutlineMarkEmailRead />
+                    manzoorahmadm293@gmail.com
+                  </span>
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdLocalPhone />
+                    +923430510227
+                  </span>
+                </TableCell>
+
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <SlCalender />
+                    23-10-2026
+                  </span>
+                </TableCell>
+              </TableRow>
+
+              <TableRow>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <Checkbox {...label} size="small" />
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <div className="flex items-center gap-4 w-[70px]">
+                    <div className="w-[45px] h-[45px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                  </div>
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  Manzoor Ahmad
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdOutlineMarkEmailRead />
+                    manzoorahmadm293@gmail.com
+                  </span>
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdLocalPhone />
+                    +923430510227
+                  </span>
+                </TableCell>
+
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <SlCalender />
+                    23-10-2026
+                  </span>
+                </TableCell>
+              </TableRow>
+
+              <TableRow>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <Checkbox {...label} size="small" />
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <div className="flex items-center gap-4 w-[70px]">
+                    <div className="w-[45px] h-[45px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                  </div>
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  Manzoor Ahmad
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdOutlineMarkEmailRead />
+                    manzoorahmadm293@gmail.com
+                  </span>
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdLocalPhone />
+                    +923430510227
+                  </span>
+                </TableCell>
+
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <SlCalender />
+                    23-10-2026
+                  </span>
+                </TableCell>
+              </TableRow>
+
+              <TableRow>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <Checkbox {...label} size="small" />
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <div className="flex items-center gap-4 w-[70px]">
+                    <div className="w-[45px] h-[45px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                  </div>
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  Manzoor Ahmad
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdOutlineMarkEmailRead />
+                    manzoorahmadm293@gmail.com
+                  </span>
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdLocalPhone />
+                    +923430510227
+                  </span>
+                </TableCell>
+
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <SlCalender />
+                    23-10-2026
+                  </span>
+                </TableCell>
+              </TableRow>
+
+              <TableRow>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <Checkbox {...label} size="small" />
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <div className="flex items-center gap-4 w-[70px]">
+                    <div className="w-[45px] h-[45px] rounded-md overflow-hidden group">
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                        alt="women-dress"
+                        className="w-full group-hover:scale-105 transition-all"
+                      />
+                    </div>
+                  </div>
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  Manzoor Ahmad
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdOutlineMarkEmailRead />
+                    manzoorahmadm293@gmail.com
+                  </span>
+                </TableCell>
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdLocalPhone />
+                    +923430510227
+                  </span>
+                </TableCell>
+
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <SlCalender />
+                    23-10-2026
                   </span>
                 </TableCell>
               </TableRow>

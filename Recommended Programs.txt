@@ -1,0 +1,43 @@
+ As i Almostly completed the frontend part of admin, cLIENT SIDE OF E-Commerce project;
+
+Now i Start building the Backend:
+
+Step-1:
+
+ 			i create the Server root dir,
+			npm init -y,
+			create index.js
+			Now i need to install different types of packages:
+							
+					bycryptjs, cloudinary , cookie-parser, cors, dotenv, express, helmet , jsonwebtoken, 
+					mongoose, morgan, multer, nodemon
+
+Step-2:
+			import the package that are needed to create server: 
+			
+			i import it in index.js main root file: 
+								import express, { response } from "express";
+								import cors from "cors";
+								import dotenv from "dotenv";
+								dotenv.config();
+								import cookieParser from "cookie-parser";
+								import morgan from "morgan";
+								import helmet from "helmet";
+
+								const app = express();
+								app.use(cors());
+								app.options("*", cors());
+
+								app.use(express.json());
+								app.use(cookieParser());
+								app.use(morga0n());
+								app.use(helmet({
+    										crossOriginResourcePolicy: false,
+  										}),
+									);
+
+
+
+Username: manzoorahmadm293\_db\_user
+
+Password: u6KuhlTyghJRz0Vp
