@@ -19,7 +19,7 @@ const userSchema = mongoose.Schema(
       default: "",
     },
     mobile: {
-      type: Number,
+      type: String,
       default: null,
     },
     verify_email: {
@@ -27,9 +27,19 @@ const userSchema = mongoose.Schema(
       default: false,
     },
 
+    access_token: {
+      type: String,
+      default: "",
+    },
+
+    refresh_token: {
+      type: String,
+      default: "",
+    },
+
     last_login_date: {
       type: Date,
-      default: "",
+      default: null,
     },
     status: {
       type: String,

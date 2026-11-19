@@ -1,3 +1,7 @@
+import dns from "node:dns";
+
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
@@ -11,7 +15,7 @@ async function connectDB() {
     await mongoose.connect(process.env.MONGODB_URI);
     console.log("Connect DB");
   } catch (error) {
-    console.log("Mongodb connect error", err);
+    console.log("Mongodb connect error", error);
     process.exit(1);
   }
 }

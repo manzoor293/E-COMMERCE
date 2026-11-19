@@ -49,7 +49,7 @@ const VerificationEmail = (username, otp) => {
   <body>
   <div class="container">
   <div class="header">
-  <h1>Verify Your Email Address</h1>
+  <h1>Hi ${username} Verify Your Email Address</h1>
   </div>
   <div class="content">
       <p>Thank you for registering with Spicez Gold. Please use the OTP below to verify your email address:
