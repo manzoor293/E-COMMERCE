@@ -8,6 +8,7 @@ import helmet from "helmet";
 
 import connectDB from "./config/connectDB.js";
 import userRouter from "./route/user.route.js"; // userRouter imported
+import categoryRouter from "./route/category.route.js";
 
 const app = express();
 app.use(cors());
@@ -31,6 +32,7 @@ app.get("/", (request, response) => {
 });
 
 app.use("/api/user", userRouter);
+app.use("/api/category", categoryRouter);
 
 connectDB().then(() => {
   app.listen(process.env.PORT, () => {
